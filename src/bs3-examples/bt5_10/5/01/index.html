@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bootstrap组件</title>
+    <link href="bootstrap.min.css" rel="stylesheet ">
+</head>
+<body>
+    <div class="container">
+        <div class="input-group">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" placeholder="UserName">
+        </div>
+
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-addon">.00</span>
+        </div>
+
+        <div class="input-group">
+            <span class="input-group-addon">$</span>
+            <input type="text" class="form-control">
+            <span class="input-group-addon">.00</span>
+        </div>
+
+        <!--输入框的尺寸大小-->
+        <div class="input-group input-group-lg">
+            <span class="input-group-addon">@</span>
+            <input type="text" class="form-control" placeholder="UserName">
+        </div>
+
+        <div class="input-group">
+            <input type="text" class="form-control">
+            <span class="input-group-addon">.00</span>
+        </div>
+
+        <div class="input-group input-group-sm">
+            <span class="input-group-addon">$</span>
+            <input type="text" class="form-control">
+            <span class="input-group-addon">.00</span>
+        </div>
+
+        <!--复选框-->
+        <br/>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="=input-group">
+                    <span class="input-group-addon">
+                        <input type="checkbox">
+                    </span>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+
+        <!--单选框-->
+        <br/>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="=input-group">
+                    <span class="input-group-addon">
+                        <input type="radio">
+                    </span>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+
+
+        <!--按钮-->
+        <br/>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="=input-group">
+                    <span class="input-group-btn">
+                        <button class="btn btn-default" type="button">Go!</button>
+                    </span>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+
+
+        <!--下拉菜单-->
+        <br/>
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="=input-group">
+                   <div class="input-group-btn">
+                       <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Action
+                       <span class="caret"></span>
+                       </button>
+                       <ul class="dropdown-menu" role="menu">
+                           <li><a href="#">Hello</a></li>
+                           <li><a href="#">Hello</a></li>
+                           <li><a href="#">Hello</a></li>
+                           <li><a href="#">Hello</a></li>
+                           <li><a href="#">Hello</a></li>
+                       </ul>
+                   </div>
+                    <input type="text" class="form-control">
+                </div>
+            </div>
+        </div>
+    </div>
+
+<script src="jquery-2.1.1.min.js"></script>
+<script src="bootstrap.min.js"></script>
+</body>
+</html>

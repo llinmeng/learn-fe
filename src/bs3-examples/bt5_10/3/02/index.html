@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <form role="form">
+        <!--<fieldset disabled> :全文禁用-->
+            <input type="text" class="form-control">
+            <textarea class="form-control" rows="5">Hello</textarea>
+
+            <!--复选框-->
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    吃橘子
+                </label>
+            </div>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="">
+                    吃苹果
+                </label>
+            </div>
+
+            <!--单选框: name必须一样-->
+            <div class="radio">
+                <label>
+                    <input name="optionsRadios" type="radio" checked>
+                    男
+                </label>
+            </div>
+            <div class="radio">
+                <label>
+                    <input name="optionsRadios" type="radio">
+                    女
+                </label>
+            </div>
+
+            <!--下拉列表-->
+            <select class="form-control" multiple>      <!--multiple: 显示下拉列表-->
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+            </select>
+
+            <!--静态-->
+            <p class="form-control-static">请按照我的格式输入: hello@qq.com</p>
+
+            <!--禁用-->
+            <input class="form-control" placeholder="hello" disabled>
+
+            <!--只读-->
+            <input class="form-control" type="text" readonly>
+       <!-- </fieldset>-->
+
+        <hr>
+        <!--状态: 颜色-->
+        <div class="form-group has-warning">
+            <label>用户名</label>
+            <input class="form-control" type="text">
+        </div>
+        <div class="form-group has-success">
+            <label>用户名</label>
+            <input class="form-control" type="text">
+        </div>
+        <div class="form-group has-error">
+            <label>用户名</label>
+            <input class="form-control" type="text">
+        </div>
+    </form>
+</body>
+</html>

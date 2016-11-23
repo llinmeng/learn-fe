@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>标签页</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <div class="container">
+        <ul id="mytab" class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="">home</a> </li>
+            <li role="presentation"><a href="">Hello</a> </li>
+            <li role="presentation"><a href="">World</a> </li>
+        </ul>
+
+        <br/>
+        <ul id="mytab" class="nav nav-pills" role="tablist">
+            <li role="presentation" class="active"><a href="">home</a> </li>
+            <li role="presentation"><a href="">Hello</a> </li>
+            <li role="presentation"><a href="">World</a> </li>
+        </ul>
+
+        <!--垂直展示-->
+        <br/>
+        <ul id="mytab" class="nav nav-pills nav-stacked" role="tablist">
+            <li role="presentation" class="active"><a href="">home</a> </li>
+            <li role="presentation"><a href="">Hello</a> </li>
+            <li role="presentation"><a href="">World</a> </li>
+        </ul>
+
+        <!--两端对齐-->
+        <br/>
+        <ul id="mytab" class="nav nav-pills nav-justified" role="tablist">
+            <li role="presentation" class="active"><a href="">home</a> </li>
+            <li role="presentation"><a href="">Hello</a> </li>
+            <li role="presentation"><a href="">World</a> </li>
+        </ul>
+
+        <!--禁用-->
+        <br/>
+        <ul id="mytab" class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="">home</a> </li>
+            <li role="presentation"><a href="">Hello</a> </li>
+            <li role="presentation" class="disabled"><a href="">World</a> </li>
+        </ul>
+
+        <!--下拉-->
+        <br/>
+        <ul id="mytab" class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="">home</a> </li>
+            <li role="presentation"><a href="">Hello</a> </li>
+            <li role="presentation" class="dropdown"><a href="" class="dropdown-toggle" data-toggle="dropdown">World
+            <span class="caret"></span>
+            </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li role="presentation"><a role="menuitem" tabindex="-1">hello1</a> </li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1">hello2</a> </li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1">hello3</a> </li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1">hello4</a> </li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1">hello5</a> </li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+<script src="jquery-2.1.1.min.js"></script>
+<script src="bootstrap.min.js"></script>
+<script>
+    $("#mytab a").click(function(e){
+        e.preventDefault();
+        $(this).tab("show");
+    })
+</script>
+</body>
+</html>

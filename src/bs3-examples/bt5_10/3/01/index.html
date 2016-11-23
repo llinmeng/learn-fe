@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+    <form role="form">
+        <!--输入框-->
+        <div class="form-group">
+            <label>用户名</label>
+            <input type="date" class="form-control" placeholder="user">
+        </div>
+        <div class="form-group">
+
+        <label>Email</label>
+            <input type="email" class="form-control" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+
+        <label>密码</label>
+            <input type="password" class="form-control" placeholder="password">
+        </div>
+        <!--选择框-->
+        <div class="form-group">
+            <label>选择文件</label>
+            <input type="file">
+            <p class="help-block">选择你需要的文件</p>
+        </div>
+    </form>
+
+    <!--内联表单: 宽度由100%变为自适应的-->
+    <form role="form" class="form-inline">
+        <!--输入框-->
+        <div class="form-group">
+            <label>用户名</label>
+            <input type="date" class="form-control" placeholder="user">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" class="form-control" placeholder="Enter email">
+        </div>
+        <div class="form-group">
+            <label>密码</label>
+            <input type="password" class="form-control" placeholder="password">
+        </div>
+        <!--选择框-->
+        <div class="form-group">
+            <label>选择文件</label>             <!--class="sr-only": 隐藏label-->
+            <input type="file">
+            <p class="help-block">选择你需要的文件</p>
+        </div>
+    </form>
+
+    <hr/>
+    <!--水平排列表单-->
+    <form class="form-horizontal" role="form">
+        <div class="form-group">
+            <label class="col-sm-2 control-label">Email</label>
+            <div class="col-sm-10">
+                <input type="email" class="form-control" placeholder="Email">       <!--class="form-control": 圆角效果-->
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="col-sm-2 control-label">password</label>
+            <div class="col-sm-10">
+                <input type="password" class="form-control" placeholder=" password">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">         <!--col-sm-offset-2: 移位 对齐-->
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox">记住密码
+                    </label>
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">登录</button>
+            </div>
+        </div>
+    </form>
+
+</body>
+</html>
