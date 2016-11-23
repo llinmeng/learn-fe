@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function changeAge(person) {
+            if (typeof person == 'object' && typeof person.age == 'number') {
+                document.write("函数执行前person的age值为: " + person.age + "<br />");
+                person.age = 10;
+                document.write("函数执行中person的age值为: " + person.age + "<br />");
+            } else {
+                document.writeln("参数类型不符合" + typeof person + "<br />");
+            }
+        }
+
+        changeAge();
+        changeAge('xxx');
+        changeAge(true);
+
+        /*采用JSON语法创建第一个对象*/
+        p = {
+            abc: 34
+        };
+        changeAge(p);
+        person = {
+            age: 25
+        };
+        changeAge(person);
+    </script>
+</body>
+
+</html>

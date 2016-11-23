@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        alert(/^<a href=(\'|\")[a-zA-Z0-9\/:\.]*(\'|\")>.*<\/a>$/.test("<a href='http://www.crazyit.org'>疯狂Java联盟</a>"));
+
+        function trim(s) {
+            return s.replace(/(^\s*)|(s*$)/g, "");
+        }
+        alert(trim('    Hello, JavaScript  '));
+    </script>
+</body>
+
+</html>

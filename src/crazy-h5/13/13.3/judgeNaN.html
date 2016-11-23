@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <!--NaN不会与任何数值变量相等, 包括NaN-->
+    <script type="text/javascript">
+        var x = 0 / 0;
+        if (x != x) {
+            alert("NaN不等于NaN!");
+        }
+        if (isNaN(x)) {
+            alert("x是一个NaN");
+        }
+    </script>
+</body>
+
+</html>

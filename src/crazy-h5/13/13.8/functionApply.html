@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var myfun = function(a, b) {
+            alert("a的值是: " + a + "\nb的值是: " + b);
+        }
+        myfun.call(window, 12, 23);
+        var example = function(num1, num2) {
+            myfun.apply(this, arguments);
+        }
+        example(20, 40);
+        myfun.apply(window, [12, 23]);
+    </script>
+</body>
+
+</html>

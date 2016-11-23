@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function outer() {
+            function inner1() {
+                document.writeln("局部函数1111<br />");
+            }
+
+            function inner2() {
+                document.writeln("局部函数2222<br />");
+            }
+            document.writeln("开始测试局部函数...<br />");
+            inner1();
+            inner2();
+            document.writeln("结束测试局部函数...<br />");
+        }
+        document.writeln("调用outer之前....<br />");
+        outer();
+        inner1(); /*在外部函数之外的地方调用局部函数 ===>> 不会执行*/
+        document.writeln("调用outer之后...<br />");
+    </script>
+</body>
+
+</html>

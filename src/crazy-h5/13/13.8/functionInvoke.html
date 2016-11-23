@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var hello = function(name) {
+            document.writeln(name + ", 你好<br />");
+        }
+
+        window.hello("孙悟空"); /*以window作为调用者*/
+        /*定义一个对象*/
+        var p = {
+            /*定义一个函数, 该函数属于p对象*/
+            walk: function() {
+                for (var i = 0; i < 2; i++) {
+                    document.writeln("慢慢地走....<br />");
+                }
+            }
+        }
+        p.walk();
+    </script>
+</body>
+
+</html>

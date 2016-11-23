@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        outer:
+            for (var i = 0; i < 5; i++) {
+                for (var j = 0; j < 5; j++) {
+                    document.writeln("j的值是: " + j);
+                    if (j >= 2)
+                        continue outer;
+                    document.writeln("i的值是: " + i);
+                    document.writeln("<br />");
+                }
+            }
+    </script>
+</body>
+
+</html>

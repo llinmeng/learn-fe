@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function Person(name) {
+            this.name = name;
+            this.info = function() {
+                alert("我的name是: " + this.name);
+            }
+        }
+        var p = new Person('yeeku');
+        p.info(); /*引用函数*/
+        var name = "测试名称";
+        p.info.call(window);
+    </script>
+</body>
+
+</html>

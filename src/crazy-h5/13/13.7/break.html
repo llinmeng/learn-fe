@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        for (var i = 0; i < 5; i++) {
+            for (var j = 0; j < 5; j++) {
+                document.writeln("j的值是: " + j);
+                if (i >= 2)
+                    break; /*中止本层循环, 外部循环计数器加1*/
+                document.writeln('i值为: ' + i);
+                document.writeln('<br />');
+            }
+        }
+    </script>
+</body>
+
+</html>

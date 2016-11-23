@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function test(o) {
+            /*定义变量i, 作用范围是整个函数*/
+            var i = 0;
+            if (typeof o == "object") {
+                /*定义变量j, 作用范围是整个函数内, 而不是if块内*/
+                var j = 5;
+                for (k = 0; k < 10; k++) {
+                    /*JS没有代码块范围, k的作用范围是整个函数内, 而不是循环体内*/
+                    document.write(k);
+                }
+            }
+            alert(k + "\n" + j);
+        }
+        test(document);
+    </script>
+</body>
+
+</html>

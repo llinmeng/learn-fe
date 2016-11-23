@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function Person(national, age) {
+            this.age = age; /*实例属性, 通过类访问*/
+            Person.national = national; /*类属性, 通过类访问, 对象访问该属性将返回undefined*/
+            var bb = 0; /*局部变量, 函数内有效*/
+        }
+        var p1 = new Person("中国", 29);
+        document.writeln("创建第一个Person对象<br />");
+        document.writeln("p1的age属性为: " + p1.age + "<br />");
+        document.writeln("p1的national属性为: " + p1.national + "<br />");
+        document.writeln("通过Person访问静态national属性为: " + Person.national + "<br />");
+        document.writeln("p1的bb属性为: " + p1.bb + "<br /><hr />");
+
+        var p2 = new Person("美国", 32);
+        document.writeln("创建两个Person对象之后<br />");
+        document.writeln("p1的age属性为: " + p1.age + "<br />");
+        document.writeln("p1的national属性为: " + p1.national + "<br />");
+        document.writeln("p2的age属性为: " + p2.age + "<br />");
+        document.writeln("p2的national属性为: " + p2.national + "<br />");
+        document.writeln("通过Person访问静态national属性为: " + Person.national + "<br />");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var hello = function(name) {
+            return name + ", 你好";
+        }
+        alert("hello是否为Function对象: " + (hello instanceof Function) + "\n hello是否为Object对象: " + (hello instanceof Object));
+        alert(hello); /*直接输出函数本身, 将会输出函数代码*/
+    </script>
+</body>
+
+</html>

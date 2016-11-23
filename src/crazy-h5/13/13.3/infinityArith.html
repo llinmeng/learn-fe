@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <!--Infinity, -Infinity 与其他数值进行算术运算时， 结果为NaN-->
+    <script type="text/javascript">
+        var y = -1.7976931348623157e308;
+        y = y - 1e292;
+        alert(y);
+        alert(y + 3E3000);
+        a = Number.POSITIVE_INFINITY;
+        b = Number.NEGATIVE_INFINITY;
+        alert(a + b);
+    </script>
+</body>
+
+</html>

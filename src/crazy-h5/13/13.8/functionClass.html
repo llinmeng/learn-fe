@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var test = function(name) {
+            return name + ", 你好";
+        }
+        var rval = test('leegang'); /*直接调用函数*/ /*返回值*/
+        var obj = new test('leegang'); /*使用new关键字调用函数*/ /*将函数当成类使用， 得到对象*/
+        alert(rval + "\n" + obj);
+    </script>
+</body>
+
+</html>

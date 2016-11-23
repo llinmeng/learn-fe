@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function test() {
+            alert("第一个无参数的test函数");
+        }
+
+        function test(name) { /*后面定义的同名函数将会覆盖前面定义的函数*/
+            alert("第二个带name参数的test函数: " + name);
+        }
+
+        test();
+    </script>
+</body>
+
+</html>

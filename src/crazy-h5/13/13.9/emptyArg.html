@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function changeAge(person) {
+            if (typeof person == 'object') {
+                person.age = 10;
+                document.write("函数执行中person的age值为: " + person.age + "<br />");
+            } else {
+                alert("参数类型不符合: " + typeof person)
+            }
+        }
+        changeAge();
+    </script>
+</body>
+
+</html>

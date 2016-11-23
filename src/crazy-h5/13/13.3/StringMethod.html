@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <!---->
+    <script type="text/javascript">
+        /*一个中文字符算一个字符长度*/
+        var a = "abc中国";
+        var b = a.length;
+        /*将Unicode值转换为字符串*/
+        var c = String.fromCharCode(97, 98, 99);
+        alert(b + "---" + a.charAt(4) + "---" + a.charCodeAt(4) + "---" + c);
+    </script>
+</body>
+
+</html>
