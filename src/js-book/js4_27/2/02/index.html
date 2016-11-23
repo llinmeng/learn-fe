@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body onload="myWin()">
+    <button id="btn" onclick="stopWin()">按钮</button>
+    <p id = "ptime"></p>
+    <script>
+        /*var mytime = setInterval(function () {
+            getTime();
+        }, 1000);
+
+        function getTime() {
+            var d = new Date();
+            var t = d.toLocaleTimeString();
+            document.getElementById("ptime").innerHTML = t;
+        }
+
+        function stopTime() {
+                clearTimeout(mytime);
+        }*/
+
+      /*  var win;
+        function myWin() {
+            win = setTimeout(function () {
+                alert("hello");
+            }, 3000);
+        }*/
+
+        var win;
+        function myWin() {
+            alert("hello");
+            win = setTimeout(function () {
+                myWin();
+            }, 3000);
+        }
+
+        function stopWin() {
+            clearTimeout(win);
+        }
+    </script>
+</body>
+</html>

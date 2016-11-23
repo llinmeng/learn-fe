@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!--<p id="pid">hello</p>
+    <button onclick="change()">按钮</button>
+    <script>
+        function change() {
+            document.getElementById("pid").innerHTML = "world";
+        }
+    </script>-->
+
+    <button id="btn">按钮</button>
+    <script>
+        /*document.getElementById("btn").addEventListener("click", function () {
+            alert("hello");
+        });*/
+
+        var x = document.getElementById("btn");
+        x.addEventListener("click", hello);         //句柄
+        x.addEventListener("click", world);
+
+        x.removeEventListener("click", hello);      //移除句柄
+
+        function hello() {
+            alert("hello");
+        }
+        function world() {
+            alert("world");
+        }
+    </script>
+</body>
+</html>
