@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style type="text/css">
+        .selected {
+            background: #6666ff;
+        }
+    </style>
+</head>
+
+<body>
+    <ol id="books">
+        <li id="java">疯狂Java讲义</li>
+        <li id=" ssh">轻量级Java EE企业应用实战</li>
+        <li id="ajax" class="selected">疯狂Ajax讲义</li>
+        <li id="xml">疯狂XML讲义</li>
+        <li id="ebj">经典Java EE企业应用实战</li>
+        <li id="workflow">疯狂Android讲义</li>
+    </ol>
+    <input type="button" value="父节点" onclick="change(curTarget.parentNode);" />
+    <input type="button" value="第一个" onclick="change(curTarget.parentNode.firstChild.nextSibling);" />
+    <input type="button" value="上一个" onclick="change(curTarget.previousSibling.previousSibling);" />
+    <!--两次调用previousSibling: 浏览器会将"空白"(换行和空格)也当成文本节点-->
+    <input type="button" value="下一个" onclick="change(curTarget.nextSibling.nextSibling);" />
+    <input type="button" value="最后一个" onclick="change(curTarget.parentNode.lastChild.previousSibling);" />
+
+    <script type="text/javascript">
+        var curTarget = document.getElementById("ajax");
+        var change = function(target) {
+            alert(target.innerHTML);
+        }
+    </script>
+</body>
+
+</html>
