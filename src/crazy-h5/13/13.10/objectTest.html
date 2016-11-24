@@ -7,9 +7,17 @@
 </head>
 
 <body>
-    <script type="text/javascript">
-    
-    </script>
+<script type="text/javascript">
+    function Person(name) {
+        this.name = name;
+    }
+
+    var p = new Person('yeeku');
+    if (p instanceof Person)
+        document.writeln("p是Person的实例<br />");
+    if (p instanceof Object) /*开发者指定类都是Object类的子类*/
+        document.writeln("p是Object的实例<br />");
+</script>
 </body>
 
 </html>

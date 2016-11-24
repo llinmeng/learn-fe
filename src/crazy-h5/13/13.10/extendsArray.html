@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        Array.prototype.indexOf = function (obj) {
+            var result = -1;
+            for(var i = 0; i < this.length; i++) {
+                if (this[i] == obj) {
+                    result = i;
+                    break;
+                }
+            }
+            return result;
+        }
+
+        var arr = [4, 5, 7, -2];
+        alert(arr.indexOf(-2));
+    </script>
+</body>
+
+</html>

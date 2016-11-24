@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.info = function () {  /*为Person对象指定info方法*/
+                document.writeln("姓名: " + this.name);
+                document.writeln("年龄" + this.age);
+            }
+        }
+
+        var p1 = new Person('yeeku', 29);
+        p1.info();
+        document.writeln("<hr />");
+        var p2 = new Person("wawa", 26);
+        p2.info();
+    </script>
+</body>
+
+</html>

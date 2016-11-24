@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        function Person() {
+            var locVal = '疯狂Java联盟';
+            this.info = function () {
+                /*此处会形成闭包*/
+                document.writeln("locVal的值为: " + locVal);
+                return locVal;
+            }
+        }
+
+        var p = new Person();
+        var val = p.info();
+        /*输出val返回值, 该返回值是局部变量locVal*/
+        alert(val);
+    </script>
+</body>
+
+</html>
