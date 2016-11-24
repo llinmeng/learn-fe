@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var myobj = new Object();
+        myobj.name = 'yeeku';
+        myobj.age = 19;
+
+        function abc() {
+            document.writeln("对象的name属性: " + this.name);
+            document.writeln("<br />");
+            document.writeln("对象的age属性: " + this.age);
+        };
+        myobj.info = abc;
+        /*info无括号， 有括号表示调用该函数， 将该函数的返回值赋给该对象的属性*/
+        document.writeln("<hr />");
+        myobj.info();
+    </script>
+</body>
+
+</html>

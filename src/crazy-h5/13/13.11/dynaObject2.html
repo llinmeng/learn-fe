@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        /*用new Function定义匿名函数, 为JavaScript对象增加方法*/
+        var myobj = new Object();
+        myobj.name = 'yeeku';
+        myobj.age = 29;
+        myobj.info = new Function("document.writeln('对象的name属性: ' + this.name);" + "document.writeln('<br />');" + "document.writeln('对象的age属性: ' + this.age)");
+        document.writeln("<hr />");
+        myobj.info();
+    </script>
+</body>
+
+</html>
