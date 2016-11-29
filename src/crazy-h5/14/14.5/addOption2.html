@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body id="test">
+    <script type="text/javascript">
+        var a = document.createElement("select");
+        for (var i = 0; i < 10; i++) {
+            var op = new Option("新增的选项" + i, i);
+            a.options[i] = op;
+        }
+        a.size = 6;
+        document.getElementById("test").appendChild(a);
+    </script>
+</body>
+
+</html>

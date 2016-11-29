@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <ul id="d">
+        <li>疯狂Java讲义</li>
+    </ul>
+    <script type="text/javascript">
+        var ul = document.getElementById("d");
+        var ajax = ul.firstChild.nextSibling.cloneNode(false);
+        ajax.innerHTML = "疯狂Ajax讲义";
+        /*在复制的节点插入ul的第一个子节点之前*/
+        ul.insertBefore(ajax, ul.firstChild);
+    </script>
+</body>
+
+</html>

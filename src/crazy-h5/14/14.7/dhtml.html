@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body id="bd">
+    <a href="http://www.crazyit.org">疯狂Java联盟</a><br />
+    <img id="lee" src="http://crazyit.org/logo.jpg" alt="疯狂Java联盟" /><br />
+    <form>
+        <input type="text" name="user" value="文本框"/><br />
+        <input type="button" id="bn" value="按钮" />
+    </form>
+    <script type="text/javascript">
+        alert(document.body.id);
+        alert(document.links[0].href);
+        alert(document.images['lee'].alt);
+        form = document.forms[0];
+        alert(form.innerHTML);
+        alert(form.elements[0].value);
+        alert(form.elements['bn'].value);
+        alert(document.all['bn'].value);
+    </script>
+</body>
+
+</html>

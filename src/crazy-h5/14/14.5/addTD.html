@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body id="test">
+    <script type="text/javascript">
+        var a = document.createElement("table");
+        /*设置表格的边框为1*/
+        a.border = 1;
+        var caption = a.createCaption();
+        caption.innerHTML = "表格标题";
+
+        for (var i = 0; i < 5; i++) {
+            var row = a.insertRow(i);
+            for (var j = 0; j < 7; j++) {
+                var cell = row.insertCell(j);
+                cell.innerHTML = "单元格内容 " + i + j;
+            }
+        }
+        /*将表格元素添加到HTML文档内*/
+        document.getElementById("test").appendChild(a);
+    </script>
+</body>
+
+</html>

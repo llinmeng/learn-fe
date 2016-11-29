@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body id="test">
+    <script type="text/javascript">
+        var a = document.createElement("select"); /*创建<select.../>对象*/
+        /*为<select.../>对象添加10个选项*/
+        for (var i = 0; i < 10; i++) {
+            /*创建一个<option.../>元素*/
+            var op = document.createElement("option");
+            op.innerHTML = '新增的选项' + i;
+            /*将新的选项添加到列表框的最后*/
+            a.add(op, null);
+        }
+        /*设置列表框的高度, 显示出来的*/
+        a.size = 5;
+        /*将列表框添加成body元素的子节点*/
+        document.getElementById("test").appendChild(a);
+    </script>
+</body>
+
+</html>

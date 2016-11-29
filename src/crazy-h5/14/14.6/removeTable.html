@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <input id="delrow" type="button" value="删除表格的最后一行" onclick="delrow();"/><br/>
+    <input id="delcell" type="button" value="删除最后一行的最后一格" onclick="delcell();"><br/>
+    <table id="test" border="1" style="width: 400px;">
+        <caption>疯狂Java体系</caption>
+        <tr>
+            <td>疯狂Java讲义</td>
+            <td>轻量级Java EE企业应用实战</td>
+        </tr>
+        <tr>
+            <td>疯狂Ajax讲义</td>
+            <td>经典Java EE企业应用实战</td>
+        </tr>
+        <tr>
+            <td>疯狂XML讲义</td>
+            <td>疯狂Android讲义</td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        var tab = document.getElementById("test");
+        var delrow = function() {
+            if (tab.rows.length > 0) {
+                /*删除最后一行*/
+                tab.deleteRow(tab.rows.length - 1);
+            }
+        }
+        var delcell = function() {
+            var rowList = tab.rows;
+            var lastRow = rowList.item(rowList.length - 1);
+            if(lastRow.cells.length > 0) {
+                /*删除表格的最后一格*/
+                lastRow.deleteCell(lastRow.cells.length - 1);
+            }
+        }
+    </script>
+</body>
+
+</html>
