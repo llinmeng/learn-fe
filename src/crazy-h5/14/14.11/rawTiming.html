@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>分析页面加载时间</title>
+    <script type="text/javascript">
+        var start = new Date().getTime();
+        var load = function () {
+            var now = new Date().getTime();
+            var page_load_time = now - start;
+            alert("页面加载时间: " + page_load_time);
+        }
+    </script>
+</head>
+
+<body onload="load()">
+
+</body>
+
+</html>

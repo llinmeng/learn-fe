@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>在地图上定位</title>
+    <style type="text/css">
+        html {
+            height: 100%
+        }
+        
+        body {
+            height: 100%;
+            margin: 0px;
+            padding: 0px
+        }
+        
+        #map_canvas {
+            height: 100%
+        }
+    </style>
+    <script type="text/javascript" src="http://maps.goole.com/maps/api/js?sensor=false">
+    </script>
+    <script type="text/javascript">
+        function initialize() {
+            navigator.geolocation.getCurrentPosition(function(position) {   /*成功回调函数*/
+                var latlng = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+                var myOptions = {
+                    zoom: 16,
+                    center: latlng,
+                    mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var mapDiv = document.getElementById("map_canvas");
+                var map = new google.maps.Map(mapDiv, myOptions);
+                var marker = new google.maps.Marker({
+                    content: "我在这里!"
+                });
+                info.open(map, marker);
+            }, function(error) {    /*失败回调函数*/
+                alert("您的浏览器没有提供地理位置信息!");
+            }, {    /*options*/
+                enableHighAccuracy: true,
+                maximumAge: 1000
+            });
+        }
+    </script>
+</head>
+
+<body onload="initialize()">
+    <div id="map_canvas" style="width: 100%; height: 100%"></div>
+</body>
+
+</html>

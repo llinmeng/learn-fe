@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var setCookie = function (name, value) {
+            var expdate = new Date();
+            expdate.setMonth(expdate.getMonth() + 1);
+            document.cookie = name + "=" + escape(value) + "; expires=" + expdate.toGMTString() + ";";
+        }
+
+        var getCookie = function (name) {
+            var offset = document.cookie.indexOf(name);
+            if (offset != -1) {
+                offset += name.length + 1;
+                end = document.cookie.indexOf(";", offset);
+                if (end == -1) {
+                    end = document.cookie.length;
+                }
+                return unsecape(document.cookie.substring(offset, end);
+            } else {
+                return "";
+            }
+        }
+        setCookie('user', 'crazyit.org');
+        alert(getCookie('user'));
+    </script>
+</body>
+
+</html>

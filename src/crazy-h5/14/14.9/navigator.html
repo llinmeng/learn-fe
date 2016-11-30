@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        alert(window.navigator);
+        var browser = "当前的浏览器信息是: \n";
+        for (var propname in window.navigator) {
+            browser += propname + ":" + window.navigator[propname] + "\n";
+        }
+        alert(browser);
+    </script>
+</body>
+
+</html>

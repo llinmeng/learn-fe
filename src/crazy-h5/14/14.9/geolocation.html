@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+        var geoHandler = function (position) {
+            var geoMsg = "用户所在的地理位置信息是: <br/>";
+            geoMsg += "timestamp属性为: " + position.timestamp + "<br/>";
+            var coords = position.coords;
+            for (var prop in coords) {
+                geoMsg += prop + "-->" + coords[prop] + "<br/>";
+            }
+            document.writeln(geoMsg);
+        }
+
+        var errorHandler = function (error) {
+            var errMsg = {
+                1: '用户拒绝了位置服务',
+                2: '无法获取地理位置信息',
+                3: '获取地理位置信息超时'
+            };
+            alert(errMsg[error.code]);
+        }
+        navigator.geolocation.getCurrentPosition(geoHandler, errorHandler, {
+            enableHighAccuracy: true,
+            maximumAge: 1000
+        });
+    </script>
+</body>
+
+</html>

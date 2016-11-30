@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <span id="tm"></span>
+    <script type="text/javascript">
+        var cur = new Date().getTime();
+        var setTime = function () {
+            document.getElementById("tm").innerHTML = new Date().toLocaleString();
+            if (new Date().getTime() - cur <= 60 * 1000) {
+                window.setTimeout("setTime();", 1000);
+            }
+        }
+
+        setTime();
+    </script>
+</body>
+</html>
