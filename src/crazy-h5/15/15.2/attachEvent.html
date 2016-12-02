@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+     <input type="button" id="bn1" name="bn1" value="单击我"/>
+    <script type="text/javascript">
+        var test = function () {
+            alert("单击按钮");
+        }
+        document.getElementById("bn1").attachEvent("onclick", test); /*使用attachEvent执行事件绑定*/
+    </script>
+</body>
+
+</html>

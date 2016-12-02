@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script type="text/javascript">
+        String.prototype.trim = function () {
+            return this.replace( /^\s*/, "").replace( /\s*$/, "");
+        }
+
+        var check = function () {
+            /*访问页面中的第一个表单*/
+            var form = document.forms[0];
+
+            var errStr = "";
+            if (form.user.value == null || form.user.value.trim() == "") {
+                errStr += "\n用户名不能为空!";
+                form.user.focus();
+            }
+
+            if (form.pass.value == null || form.pass.value.trim() == "") {
+                errStr += "\n密码不能为空!";
+                form.pass.focus();
+            }
+
+            if (form.email.value == null || form.email.value.trim() == "") {
+                errStr += "\n电子邮件不能为空!";
+                form.email.focus();
+            }
+
+            if (!/^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w([-.]\w)*$/.test(form.email.value.trim())) {
+                errStr += "\n电子邮件格式不正确!";
+                form.email.focus();
+            }
+            /*错误字符串不为空, 表明校验出错*/
+            if (errStr != "") {
+                alert(errStr);
+                return false;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <div>
+        <h2>数据校验表单</h2>
+        <form method="post" onsubmit="return check(this);" id="register" name="register" action="#"> <!--return: 保证数据校验不能通过时拒绝表单提交-->
+            用户名: <input type="text" name="user" /><br />
+            密&nbsp;&nbsp; 码: <input type="password" name="pass"/><br />
+            电&nbsp;&nbsp; 邮: <input type="text" name="email" /><br />
+            <input type="submit" value="提交" />
+        </form>
+    </div>
+</body>
+
+</html>

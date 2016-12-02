@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+     <input type="button" id="bn1" name="bn1" value="单击我"/>
+    <script type="text/javascript">
+        var test = function () {
+            alert("单击按钮");
+        }
+        var haha = function () {
+            alert("haha函数也被触发");
+        }
+        /*采用attachEvent()方法绑定事件处理器时, 一个DOM对象,一种事件可以绑定多个事件处理器*/
+        document.getElementById("bn1").attachEvent("onclick", test); /*使用attachEvent执行事件处理函数*/
+        document.getElementById("bn1").attachEvent("onclick", haha);
+    </script>
+</body>
+
+</html>
