@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <input id="bn1" type="button" value="按钮1" onclick="alert(this.value);"/>
+    <input id="bn1" type="button" value="按钮1" onclick="alert(this.value);"/> <!--this引用按钮1-->
     <input id="bn2" type="button" value="按钮2"/>
     <input id="bn3" type="button" value="按钮3"/>
 
@@ -15,7 +15,7 @@
         var test = function () {
             alert(this.value);
         }
-        document.getElementById("bn2").onclick = test;
+        document.getElementById("bn2").onclick = test; /*this引用按钮2*/
         /*使用JSON格式定义一个对象*/
         var p = {
             value: 'p对象',
@@ -23,8 +23,8 @@
                 alert(this.value);
             }
         }
-        document.getElementById("bn3").onclick = p.info;
-        p.info();
+        document.getElementById("bn3").onclick = p.info; /*this引用按钮3*/
+        p.info();   /*this引用对象p*/
     </script>
 </body>
 
