@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <div id="test">
+        <input id="testbn" type="button" value="单击我" />
+    </div>
+    <hr/>
+    <div id="results"></div>
+    <script type="text/javascript">
+        /*事件处理函数*/
+        var gotclick1 = function (event) {
+            /*该事件处理函数简单输出事件的当前对象*/
+            document.getElementById("results").innerHTML += "事件捕获阶段: " + event.currentTarget + "<br />";
+        }
+
+        function gotclick2(event) {
+            document.getElementById("results").innerHTML += "事件冒泡阶段: " + event.currentTarget + "<br />";
+        }
+
+        document.getElementById("testbn").addEventListener("click", gotclick1, true);   /*true: 捕获阶段 - 从外向内触发*/
+        document.getElementById("test").addEventListener("click", gotclick1, true);
+        document.getElementById("testbn").addEventListener("click", gotclick2, false);  /*false: 冒泡阶段 - 从内向外触发*/
+        document.getElementById("test").addEventListener("click", gotclick2, false);
+    </script>
+</body>
+
+</html>

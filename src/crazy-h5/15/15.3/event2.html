@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <!--跨浏览器访问事件的方法-->
+    <button id="a">按钮</button>
+    <script type="text/javascript">
+        var clickHandler = function (evt) {
+            if(evt) {
+                /*对于DOM事件模型, 访问事件源用target属性*/
+                alert(evt.target.innerHTML);
+            } else {
+                /*对于IE浏览器*/
+                alert(window.event.srcElement.innerHTML);
+            }
+        }
+        document.getElementById("a").onclick = clickHandler;
+    </script>
+</body>
+
+</html>
