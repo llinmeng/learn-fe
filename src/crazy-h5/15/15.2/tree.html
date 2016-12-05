@@ -4,13 +4,57 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link type="text/css" rel="stylesheet" href="tree.css" />
+
 </head>
 
 <body>
     <div id="root" class="outline">
-        <img id="rootImage" class="outline" alt="rootImage" src="image/"
+        <img id="rootImage" class="outline" alt="rootImage" src="image/plus.png" />我的电脑
+    </div>
+    <div id="rootDetails" style="display: none">
+        <div id="child1" class="outline1">
+            <img id="child1Image" class="outline1" alt="child1Image" src="image/plus.png" />本地磁盘C:
+        </div>
+        <div id="child1Details" style="display: none">
+            <div class="passage11">
+                <img class="passage11" src="image/passage.png" />文件一
+            </div>
+            <div class="passage11">
+                <img class="passage11" src="image/passage.png" />文件二
+            </div>
+        </div>
+
+        <div id="child2" class="outline1">
+            <img id="child2Image" class="outline1" alt="child2Image" src="image/plus.png" />本地磁盘D:
+        </div>
+        <div id="child2Details" style="display: none">
+            <div class="passage11">
+                <img class="passage11" src="image/passage.png" />文件三
+            </div>
+            <div class="passage11">
+                <img class="passage11" src="image/passage.png" />文件四
+            </div>
+        </div>
+
+        <div id="child3" class="outline1">
+            <img id="child3Image" class="outline1" alt="child3Image" src="image/plus.png" />本地磁盘E:
+        </div>
+        <div id="child3Details" style="display: none">
+            <div class="passage11">
+                <img class="passage11" src="image/passage.png" />文件五
+            </div>
+            <div class="passage11">
+                <img class="passage11" src="image/passage.png" />文件六
+            </div>
+        </div>
+
+         <div class="passage1">
+             <img class="passage1" src="image/passage.png" />文件七
+         </div>
     </div>
 
+    <script src="tree.js" type="text/javascript"></script>
 </body>
 
 </html>

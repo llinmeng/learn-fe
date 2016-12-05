@@ -15,9 +15,12 @@
         var haha = function () {
             alert("haha函数也被触发");
         }
-        /*采用attachEvent()方法绑定事件处理器时, 一个DOM对象,一种事件可以绑定多个事件处理器*/
-        document.getElementById("bn1").attachEvent("onclick", test); /*使用attachEvent执行事件处理函数*/
-        document.getElementById("bn1").attachEvent("onclick", haha);
+     /*   /!*采用attachEvent()方法绑定事件处理器时, 一个DOM对象,一种事件可以绑定多个事件处理器*!/
+        document.getElementById("bn1").attachEvent("onclick", test); /!*使用attachEvent执行事件处理函数*!/
+        document.getElementById("bn1").attachEvent("onclick", haha);*/
+
+        document.getElementById("bn1").attachEvent("onclick", test);
+        document.getElementById("bn1").detachEvent("onclick", test); /*使用detachEvent删除事件处理器*/
     </script>
 </body>
 
