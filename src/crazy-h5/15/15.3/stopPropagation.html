@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <a id="mylink" href="http://www.crazyit.org">疯狂Java联盟</a>
+    <div id="show"></div>
+    <script type="text/javascript">
+        /*事件捕获阶段处理函数*/
+        var killClick1 = function (event) {
+            /*取消默认事件的默认行为*/
+            event.preventDefault();
+            /*阻止事件传播*/
+//            event.stopPropagation();
+            document.getElementById("show").innerHTML += '事件捕获阶段' + event.currentTarget + "<br />";
+        }
+        /*事件冒泡阶段处理函数*/
+        var killClick2 = function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            document.getElementById("show").innerHTML += '事件冒泡阶段' + event.currentTarget + "<br />";
+        }
+
+        document.addEventListener("click", killClick1, true);   /*true: 捕获阶段*/
+        document.getElementById("mylink").addEventListener("click", killClick1, true);
+
+        document.addEventListener("click", killClick2, false);  /*false: 冒泡阶段*/
+        document.getElementById("mylink").addEventListener("click", killClick2, false);
+    </script>
+</body>
+
+</html>

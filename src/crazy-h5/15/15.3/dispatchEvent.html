@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <!--转发事件-->
+    <input id="bn1" type="button" value="按钮1" />
+    <input id="bn2" type="button" value="按钮2" />
+    <div id="show"></div>
+    <script type="text/javascript">
+        var rd = function (evt) {
+            document.getElementById("show").innerHTML += '事件冒泡阶段: ' + evt.currentTarget.value + "被单击了<br />";
+            var e = document.createEvent("Events");
+            e.initEvent("click", true, false);
+            document.getElementById("bn2").dispatchEvent(e);
+        }
+
+        var gotClick = function (evt) {
+            document.getElementById("show").innerHTML += '事件冒泡阶段: ' + evt.currentTarget.value + "<br />";
+        }
+
+        document.getElementById("bn1").addEventListener("click", rd, false);
+        document.getElementById("bn2").addEventListener("click", gotClick, false);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    友情链接: <br />
+    <a id="mylink" href="http://www.crazyit.org">疯狂Java联盟</a>
+    <div id="show"></div>
+    <script type="text/javascript">
+        var killClicks = function (event) {
+            event.preventDefault();
+            document.getElementById("show").innerHTML += '事件捕获阶段: ' + event.currentTarget + "被单击了<br />";
+        }
+        /*为document对象绑定事件处理函数*/
+        document.addEventListener("click", killClicks, true);
+        /*为超链接绑定事件处理函数*/
+        document.getElementById("mylink").addEventListener("click", killClicks, true);  /*true: 事件捕获阶段*/
+    </script>
+</body>
+
+</html>

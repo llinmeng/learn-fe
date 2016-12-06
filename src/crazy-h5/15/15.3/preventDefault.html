@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    友情链接: <br />
+    <a id="mylink" href="http://www.crazyit.org">疯狂Java联盟</a>
+    <script type="text/javascript">
+        var killClicks = function (event) {
+            event.preventDefault();
+            alert("超链接被单击");
+        }
+        document.getElementById("mylink").addEventListener("click", killClicks, true);  /*true: 事件捕获阶段*/
+    </script>
+</body>
+
+</html>
