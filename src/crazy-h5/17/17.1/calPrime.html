@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    <title>计算质数</title>
+</head>
+
+<body>
+    <p>已经发现的所有质数: <div id="result"></div></p>
+    <script type="text/javascript">
+        var n = 1;
+        search:
+        while (n < 9999) {
+            n += 1;
+            for (var i = 2; i <= Math.sqrt(n); i++) {
+                if (n % i == 0) {
+                    continue search;
+                }
+            }
+            document.getElementById('result').innerHTML += (n + ',');
+        }
+    </script>
+</body>
+
+</html>

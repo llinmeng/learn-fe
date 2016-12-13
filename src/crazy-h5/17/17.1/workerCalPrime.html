@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=GBK">
+    <title>计算质数</title>
+</head>
+
+<body>
+    <p>已经发现的所有质数: <div id="result"></div></p>
+    <script>
+        var worker = new Worker('worker.js');
+        worker.onmessage = function (event) {
+            document.getElementById('result').innerHTML += event.data + ", ";
+        };
+    </script>
+</body>
+
+</html>
