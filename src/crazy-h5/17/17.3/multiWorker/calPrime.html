@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    起始值: <input type="=text" id="start" name="start" /><br />
+    结束值: <input type="text" id="end" name="end" /><br />
+    个数: <input type="text" id="count" name="count" /><br />
+    <input type="button" value="计算" onclick="cal();" />
+    <table id="show"></table>
+    <script type="text/javascript">
+        var cal = function () {
+            var start = parseInt(document.getElementById("start").value);
+            var end = parseInt(document.getElementById("end").value);
+            var count = parseInt(document.getElementById("count").value);
+            if (start >= end) {
+                return;
+            }
+            var cal = new Worker("worker1.js");
+            var data = {
+                start : start,
+                end : end,
+                count : count
+            };
+            /*把JavaScript对象转换为JSON字符串*/
+            cal.postMessage(JSON.stringify(data));
+            cal.onmessage = function (event) {
+                var rand = new Worker("worker2.js");
+                rand.postMessage({result : event.data, count : count});
+                rand.onmessage = function (event) {
+                    var table = document.getElementById("show");
+                    table.innerHTML = "";
+                    var result = event.data;
+                    var nums = result.split(",");
+                    var COLS_NUM = 7;
+                    for (var i = 0; i <= (nums.length - 1) / COLS_NUM; i++) {
+                        var row = table.insertRow(i);
+                        for (var j = 0; j < COLS_NUM && i * COLS_NUM + j < nums.length - 1; j++) {
+                            row.insertCell(j).innerHTML = nums[i * COLS_NUM + j];
+                        }
+                    }
+                };
+            };
+        };
+    </script>
+</body>
+
+</html>
