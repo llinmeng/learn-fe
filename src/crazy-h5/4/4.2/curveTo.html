@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>curveTo示意</h2>
+    <canvas id="mc" width="500" height="380" style="border:1px solid black"></canvas>
+    <script type="text/javascript">
+        function createFlower(context, n, dx, dy, size, length) {
+            context.beginPath();
+            context.moveTo(dx, dy + size);
+            var dig = 2 * Math.PI / n;
+            for (var i = 0; i < n + 1; i++) {
+                var ctrlx = Math.sin((i - 0.5) * dig) * length + dx;
+                var ctrly = Math.cos((i - 0.5) * dig) * length + dy;
+                var x = Math.sin(i * dig) * size + dx;
+                var y = Math.cos(i * dig) * size + dy;
+                context.quadraticCurveTo(ctrlx, ctrly, x, y);
+            }
+            context.closePath();
+        }
+
+        var canvas = document.getElementById("mc");
+        var ctx = canvas.getContext("2d");
+        /*绘制5瓣的花瓣*/
+        createFlower(ctx, 5, 70, 100, 30, 80);
+        ctx.fillStyle = "#f00";
+        ctx.fill();
+        /*绘制6瓣的花瓣*/
+        createFlower(ctx, 6, 200, 100, 30, 80);
+        ctx.fillStyle = "#ff0";
+        ctx.fill();
+        /*绘制7瓣的花瓣*/
+        createFlower(ctx, 7, 330, 100, 30, 80);
+        ctx.fillStyle = "#f0f";
+        ctx.fill();
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>lineTo示意</h2>
+    <canvas id="mc" width="500" height="380" style="border:1px solid black"></canvas>
+    <script type="text/javascript">
+        function createStar(context, n, dx, dy, size) {
+            context.beginPath();
+            var dig = Math.PI / n * 4;
+            for (var i = 0; i < n; i++) {
+                var x = Math.sin(i * dig);
+                var y = Math.cos(i * dig);
+                context.lineTo(x * size + dx, y * size + dy);
+            }
+            context.closePath();
+        }
+
+        var canvas = document.getElementById("mc");
+        var ctx = canvas.getContext("2d");
+        ctx.lineWidth = 3;
+        createStar(ctx, 3, 60, 60, 50);
+        ctx.fillStyle = "#f00";
+        ctx.fill();
+        createStar(ctx, 5, 160, 60, 50);
+        ctx.fillStyle = "#0f0";
+        ctx.fill();
+        createStar(ctx, 7, 260, 60, 50);
+        ctx.fillStyle = "#00f";
+        ctx.fill();
+        createStar(ctx, 9, 360, 60, 50);
+        ctx.fillStyle = "#f0f";
+        ctx.fill();
+    </script>
+</body>
+</html>

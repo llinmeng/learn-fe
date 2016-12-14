@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>绘制位图</h2>
+    <canvas id="mc" width="420" height="280" style="border:1px solid black"></canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById("mc");
+        var ctx = canvas.getContext("2d");
+        var image = new Image();
+        image.src = "image.jpg";
+        image.onload = function () {
+            ctx.drawImage(image, 20, 10);
+            ctx.drawImage(image, 180, 10, 76, 110);
+            var sd = 50;
+            var sh = 65;
+            ctx.drawImage(image, 2, 50, sd, sh, 265, 10, sd * 3, sh * 3);
+        }
+    </script>
+</body>
+</html>

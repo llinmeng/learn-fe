@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>arcTo示意</h2>
+    <canvas id="mc" width="400" height="280" style="border:1px solid black"></canvas>
+    <script type="text/javascript">
+        function createRoundRect(context, x1, y1, width, height, radius) {
+            ctx.moveTo(x1 + radius, y1);
+            ctx.lineTo(x1 + width - radius, y1);
+            ctx.arcTo(x1 + width, y1, x1 + width, y1 + radius, radius);
+            ctx.lineTo(x1 + width, y1 + height - radius);
+            ctx.arcTo(x1 + width, y1 + height, x1 + width - radius, y1 + height, radius);
+            ctx.lineTo(x1 + radius, y1 + height);
+            ctx.arcTo(x1, y1 + height, x1, y1 + height - radius, radius);
+            ctx.lineTo(x1, y1 + radius);
+            ctx.arcTo(x1, y1, x1 + radius, y1, radius);
+            ctx.closePath();
+        }
+
+        var canvas = document.getElementById("mc");
+        var ctx = canvas.getContext("2d");
+        ctx.lineWidth = 3;
+        createRoundRect(ctx, 30, 30, 200, 100, 20);
+        ctx.stroke();
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>绘制矩形</h2>
+    <canvas id="mc" width="400" height="280" style="border:1px solid black"></canvas>
+    <script type="text/javascript">
+        /*获取canvas元素对应的DOM对象*/
+        var canvas = document.getElementById("mc");
+        /*获取在canvas上绘图的CanvasRenderingContext2D对象*/
+        var ctx = canvas.getContext('2d');
+        ctx.fillStyle = '#f00';
+        ctx.fillRect(30, 20, 120, 60);
+        ctx.fillStyle = '#f00';
+        ctx.fillRect(80, 60, 120, 60);
+        ctx.strokeStyle = '#00f';
+        ctx.lineWidth = 10;
+        ctx.strokeRect(30, 130, 120, 60);
+        ctx.strokeStyle = '#0ff';
+        ctx.lineJoin = "round";
+        ctx.strokeRect(80, 160, 120, 60);
+        ctx.strokeStyle = '#f00';
+        ctx.lineJoin = "bevel";
+        ctx.strokeRect(130, 190, 120, 60);
+    </script>
+</body>
+</html>
