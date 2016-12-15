@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>图片高亮</h2>
+    <canvas id="mc" width="420" height="320" style="border: 1px solid black"></canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById("mc");
+        var ctx = canvas.getContext("2d");
+        var image = new Image();
+        image.src = "image.jpg";
+        image.onload = function () {
+            /*绘制原始图片*/
+            ctx.drawImage(image, 30, 20);
+            /*使用带高亮参数的方法绘制图片*/
+            lightImage(image, 220, 20, 1.6);
+        }
+
+        var lightImage = function (image, x, y, light) {
+            /*绘制图片*/
+            ctx.drawImage(image, x, y);
+            /*获取绘制图片的数据: 从x. y开始, 宽为image.width, 高为image.height的图片数据*/
+            var imgData = ctx.getImageData(x, y, image.width, image.height);
+            for (var i = 0, len = imgData.data.length; i < len; i++) {
+                /*改变每隔像素的R, G, B值*/
+                imgData.data[i + 0] = imgData.data[i + 0] * light;
+                imgData.data[i + 1] = imgData.data[i + 1] * light;
+                imgData.data[i + 2] = imgData.data[i + 2] * light;
+            }
+            /*将获取的图片数据放回去*/
+            ctx.putImageData(imgData, x, y);
+        }
+    </script>
+</body>
+</html>

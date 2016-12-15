@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>圆形渐变</h2>
+    <canvas id="mc" width="420" height="320" style="border: 1px solid black"></canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById("mc");
+        var ctx = canvas.getContext("2d");
+        ctx.save();
+        ctx.translate(30, 20);
+        lg = ctx.createRadialGradient(80, 40, 5, 80, 40, 60);
+        lg.addColorStop(0.2, "#f00");
+        lg.addColorStop(0.5, "#0f0");
+        lg.addColorStop(0.9, "#00f");
+        ctx.fillStyle = lg;
+        ctx.fillRect(0, 0, 160, 80);
+        ctx.restore();
+        ctx.translate(280, 160);
+        ctx.beginPath();
+        ctx.arc(0, 0, 80, 0, Math.PI * 2, true);
+        ctx.closePath();
+        ctx.lineWidth = 12;
+        lg2 = ctx.createRadialGradient(0, 0, 5, 0, 0, 80);
+        lg2.addColorStop(0.1, "#ff0");
+        lg2.addColorStop(0.4, "#0ff");
+        lg2.addColorStop(0.8, "#f0f");
+        ctx.fillStyle = lg2;
+        ctx.fill();
+    </script>
+</body>
+</html>

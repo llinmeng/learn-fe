@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h2>位图剪裁</h2>
+    <canvas id="mc" width="1020" height="820" style="border: 1px solid black"></canvas>
+    <script type="text/javascript">
+        var canvas = document.getElementById("mc");
+        var ctx = canvas.getContext("2d");
+        var dig = Math.PI /20;
+        var count = 0;
+        var image = new Image();
+        image.src  = "image.jpg";
+        image.onload = function () {
+            /*指定每隔0.15秒调用一次addRadial函数*/
+            setInterval("addRadial();", 150);
+        }
+
+        var addRadial = function () {
+            /*保存当前的绘图状态*/
+            ctx.save();
+            /*开始创建路径*/
+            ctx.beginPath();
+            /*添加一段弧*/
+            ctx.arc(400, 230, 400, 0, dig * ++count, false);
+            /*让弧连接到圆心*/
+            ctx.lineTo(200, 130);
+            /*关闭路径*/
+            ctx.closePath();
+            /*剪切路径*/
+            ctx.clip();
+            /*此时绘制的图片只有路径覆盖的部分才会显示出来*/
+            ctx.drawImage(image, 124, 20);
+            ctx.restore();
+        }
+    </script>
+</body>
+</html>
