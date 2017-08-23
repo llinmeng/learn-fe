@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>根据 ID 访问 HTML 元素</title>
+    <script type="text/javascript">
+        var accessById = function () {
+            alert(document.getElementById('a').innerHTML + '\n' + document.getElementById('b').value);
+        }
+    </script>
+</head>
+<body>
+    <div id = "a">JavaScript</div>
+    <textarea id="b" rows="3" cols="25">
+        ...........
+    </textarea>
+    <input type="button" value="访问2个元素" onclick="accessById()"/>
+</body>
+</html>

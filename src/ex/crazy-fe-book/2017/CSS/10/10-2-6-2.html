@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 多级列表 </title>
+    <style type="text/css">
+        body>div {
+            display: list-item;
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        div>div {
+            display: list-item;
+            list-style-type: square;
+            margin-left: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        语言
+        <div>Java 语言</div>
+        <div>JavaScript 语言</div>
+        <div>Python 语言</div>
+    </div>
+
+    <div id="div2">
+        讲义
+        <div>Java 讲义</div>
+        <div>JavaScript 讲义</div>
+        <div>Python 讲义</div>
+    </div>
+</body>
+</html>

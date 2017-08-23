@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用 JSON 语法创建对象</title>
+</head>
+<body>
+    <script type="text/javascript">
+      var person = {
+          name: 'li',
+          age: 24,
+          schools: ['小学', '中学', '大学'],
+          parents: [
+              {
+                  name: 'father',
+                  age: 60,
+                  address: '广州'
+              },
+              {
+                  name: 'mother',
+                  age: 58,
+                  address: '深圳'
+              }
+          ]
+      };
+      alert(person.parents);
+    </script>
+</body>
+</html>

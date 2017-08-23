@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>调用函数的3种方式</title>
+</head>
+<body>
+    <!-- - 直接调用 - -->
+
+    <!-- - 以 call()方法调用函数 - -->
+    <script type="text/javascript">
+        var each = function (array, fn) {
+            for (var index in array) {
+                fn.call(null, index, array[index]);
+            }
+        }
+
+        each([4, 20, 3], function (index, ele) {
+            document.write("第" + index + '个元素是: ' + ele + "<br><hr>");
+        });
+    </script>
+
+    <!-- - 以 apply()方法调用函数 - -->
+    <script type="text/javascript">
+        var myfun = function (a, b) {
+            alert('a: ' + a + "   b: " + b);
+        }
+        myfun.call(window, 12, 23);
+        var example = function (num1, num2) {
+            myfun .apply(this, arguments);
+        }
+        example(20, 40);
+        myfun.apply(window, [12, 23]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>对象和关联数组</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Person(name, age) {
+            this.anme = name;
+            this.age = age;
+            this.info = function () {
+                alert('innfo method');
+            }
+        }
+        var p = new Person('yeeku', 30);
+        for (proName in p) {
+            document.writeln('p 的对象' + proName + '属性为: ' + p[proName] + '<br>');
+        }
+    </script>
+</body>
+</html>

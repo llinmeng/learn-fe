@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 位置相关属性测试 </title>
+</head>
+<body>
+    aaaaaaaaaaaaaaaaa<br/>
+    bbbbbbbbbbbbbbbbb<br/>
+    ccccccccccccccccc<br/>
+    ddddddddddddddddd<br/>
+
+    <div id="Layer1" style="position: absolute; left: 40px; top: 20px; width: 180px; height: 108px;
+        z-index: 2; background-color: #00cc66;">Layer1, 使用 position 属性值为 absolute,
+        该 Layer 将完全漂浮在页面之上, 不受其他对象位置影响. z-index: 2.</div>
+
+    <div id="Layer2" style="position: relative; left: 50px; top: 10px; width: 200px; height: 108px;
+        z-index: 3; background-color: #ff9900;">Layer2, 使用 position 属性值为 relative,
+        该 Layer 将漂浮在页面之上, 但它将基于上面最后一行文本进行定位. z-index: 3</div>
+
+    <div style="position: absolute; left: 260px; top: 80px; width: 250px; height: 200px; border: 2px dotted red;">
+        <div id="Layer3" style="position: static; left: 100px; top: 40px; width: 80px; height: 88px;
+        z-index: 1; background-color: #ff6666;"> position: static; </div>
+        <div id="Layer4" style="position: static; left: 100px; top: 80px; width: 80px; height: 88px;
+        z-index: 1; background-color: #3399ff;"> position: static; </div>
+    </div>
+</body>
+</html>

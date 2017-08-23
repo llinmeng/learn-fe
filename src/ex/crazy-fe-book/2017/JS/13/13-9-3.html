@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>参数类型</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function changeAge(person) {
+            if(typeof person == 'object' && typeof person.age == 'number') {
+                document.write("函数执行之前 person 的 age 值为: " + person.age + "<br>");
+                person.age = 10;
+                document.write("函数执行中person 的 age 值为: " + person.age + "<br>");
+            } else {
+                document.write("参数类型不符合" + typeof person + "<br>");
+            }
+        }
+
+        changeAge();
+        changeAge('xxx');
+        changeAge(true);
+
+        p = {abc: 34};
+        changeAge(p);
+        person = {age: 25};
+        changeAge(person);
+    </script>
+</body>
+</html>

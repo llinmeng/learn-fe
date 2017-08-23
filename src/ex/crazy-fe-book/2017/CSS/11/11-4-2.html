@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 针对浏览器宽度调整布局 </title>
+    <style type="text/css">
+        /* - 默认 CSS 样式 - */
+        #container {
+            text-align: center;
+            margin: auto;
+            width: 750px;
+        }
+        #container>div {
+            border: 5px solid #ff00ff;
+            text-align: left;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border-radius: 12px 12px 0px 0px;
+            background-color: #aaaaff;
+            padding: 5px;
+        }
+        div#left {
+            width: 300px;
+            height: 280px;
+            float: left;
+        }
+        div#main {
+            width: 450px;
+            height: 280px;
+            float: left;
+            clear: right;
+        }
+        div#right {
+            width: 750px;
+            float: left;
+        }
+
+        /* - 浏览器宽度大于1000px时的 CSS 样式 - */
+        @media screen and (min-width: 1000px) {
+            #container {
+                text-align: center;
+                margin: auto;
+                width: 960px;
+            }
+            #container>div {
+                border: 5px solid blue;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                border-radius: 12px 12px 0px 0px;
+                background-color: #00FF00;
+                padding: 5px;
+            }
+            div#left {
+                width: 200px;
+                float: left;
+                height: 270px;
+            }
+            div#main {
+                width: 460px;
+                float: left;
+                height: 270px;
+                clear: none;
+            }
+            div#right {
+                width: 260px;
+                float: left;
+                height: 270px;
+            }
+        }
+        /* - 浏览器宽度小于480px 时的 CSS 样式 - */
+        @media screen and (max-width: 480px) {
+            #container {
+                text-align: center;
+                margin: auto;
+                width: 450px;
+            }
+            #container>div {
+                border: 5px solid #2db7f5;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+                border-radius: 12px 12px 0px 0px;
+                background-color: #ffff99;
+                padding: 5px;
+            }
+            div#left {
+                width: 450px;
+                float:  left;
+                height: 150px;
+            }
+            div#main {
+                width: 450px;
+                float: left;
+                height: 260px;
+                clear: both;
+            }
+            div#right {
+                width: 450px;
+                float: left;
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="left">
+            <h2>信息</h2>
+            <ul>
+                <li>........1</li>
+                <li>........2</li>
+                <li>........3</li>
+            </ul>
+        </div>
+
+        <div id="main">
+            <h2>介绍</h2>
+            &nbsp;&nbsp;&nbsp;&nbsp;地方 v 不过 i 回成都覆盖还让他于冠华酱豆腐依法合规
+            iu 发一条当天发货呢 CV 不耐烦更好听今天又范甘迪 v 不错 v 吃 v 本地风光还让他雨
+            大法官海加尔洪金宝彭佳慧 v 哦光伏发电土豆丝无水洗车 v 很过分 iu 电热毯一 i 发 v 吧.<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;地方 v 不过 i 回成都覆盖还让他于冠华酱豆腐依法合规
+            iu 发一条当天发货呢 CV 不耐烦更好听今天又范甘迪 v 不错 v 吃 v 本地风光还让他雨
+            大法官海加尔洪金宝彭佳慧 v 哦光伏发电土豆丝无水洗车 v 很过分 iu 电热毯一 i 发 v 吧.<br/>
+        </div>
+
+        <div id="right">
+            <h2>动态</h2>
+            <ul>
+                <li>SD 覆盖合家快乐</li>
+                <li>犬瘟热体育 i 哦朋</li>
+                <li>自行车 v 不能说的法国红酒看</li>
+                <li>犬瘟热体育 i 噢噢回归方程半年内发</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

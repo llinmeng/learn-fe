@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格相关标签</title>
+</head>
+<body>
+    <!--1-->
+    <table style="width: 400px" border="3">
+        <caption><b>疯狂 Java 体系</b></caption>
+        <tr>
+            <th>书名</th>
+            <th>作者</th>
+        </tr>
+        <tr>
+            <td>疯狂 Java 讲义</td>
+            <td>李刚</td>
+        </tr>
+        <tr>
+            <td>轻量级 Java EE 企业应用实战</td>
+            <td>李刚</td>
+        </tr>
+    </table>
+
+
+    <!--2-->
+    <table style="width: 400px" border="1">
+        <tr>
+            <td rowspan="2">跨2行的单元格</td>
+            <td>普通单元格</td>
+        </tr>
+        <tr>
+            <td>普通单元格</td>
+        </tr>
+        <tr>
+            <td colspan="2">跨2列的单元格</td>
+        </tr>
+        <tr>
+            <td>普通单元格</td>
+            <td>普通单元格</td>
+        </tr>
+    </table>
+
+
+    <!--3-->
+    <table border="1" style="width: 400px">
+        <caption><b>疯狂 Java 体系图书</b></caption>
+        <thead>
+        <tr>
+            <th>书名</th>
+            <th>作者</th>
+        </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="2" style="text-align: right;">现总计: 2本图书</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>疯狂 Java 讲义</td>
+                <td>李刚</td>
+            </tr>
+            <tr>
+                <td>轻量级 Java EE 企业应用实战</td>
+                <td>李刚</td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <!--4-->
+    <table style="background-color: blue; border-collapse: separate; border-spacing: 2px;">
+        <caption><b>疯狂 Java 体系图书</b></caption>
+        <colgroup style="background-color: white;">
+            <col style="width: 160px;">
+            <col span="2" style="width: 100px">
+        </colgroup>
+        <thead>
+            <tr>
+                <th>书名</th>
+                <th>作者</th>
+                <th>价格</th>
+            </tr>
+        </thead>
+        <tfoot>
+            <tr>
+                <td colspan="3" style="text-align: right;">现总计: 2本图书</td>
+            </tr>
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>疯狂 Java 讲义</td>
+                <td>李刚</td>
+                <td>109</td>
+            </tr>
+            <tr>
+                <td>轻量级 Java EE 企业应用实战</td>
+                <td>李刚</td>
+                <td>89</td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>

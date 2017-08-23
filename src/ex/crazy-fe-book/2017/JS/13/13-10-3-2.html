@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 继承和 prototype </title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Person() {
+            var locVal = 'JavaScript';
+            this.info = function () {
+                // 此处会形成闭包
+                document.writeln('值: ' + locVal);
+                return locVal;
+            }
+        }
+
+        var p = new Person();
+        var val = p.info();
+        alert(val);
+    </script>
+</body>
+</html>

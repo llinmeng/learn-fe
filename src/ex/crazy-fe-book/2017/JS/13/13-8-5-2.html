@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Student(grade, subject) {
+            this.grade = grade;
+            Student.subject = subject;
+        }
+        s1 = new Student(5, 'Js');
+        with(document) {
+            writeln('s1的 grade 属性: ' + s1.grade + '<br>');
+            writeln('s1的 subject属性: ' + s1.subject + '<br>');
+            writeln('Student 的 subject 属性: ' + Student.subject + '<br>');
+        }
+
+        s1.subject = 'Python';
+        with(document) {
+            writeln('<hr/>s1的 grade 属性赋值后<br>');
+            writeln('s1的 subject属性: ' + s1.subject + '<br>');
+            writeln('Student 的 subject 属性: ' + Student.subject + '<br>');
+        }
+    </script>
+</body>
+</html>

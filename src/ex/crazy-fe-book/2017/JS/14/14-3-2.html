@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>利用节点关系访问 HTML 元素</title>
+</head>
+<body>
+    <ol id="books">
+        <li id="js">JS</li>
+        <li id="python">Python</li>
+        <li id="go">Go</li>
+        <li id="java">Java</li>
+        <li id="ruby">Ruby</li>
+        <li id="js1">JS</li>
+    </ol>
+    <input type="button" value="父节点" onclick="change(curTarget.parentNode);"/>
+    <input type="button" value="第一个" onclick="change(curTarget.parentNode.firstChild.nextSibling);"/>
+    <input type="button" value="上一个" onclick="change(curTarget.previousElementSibling.previousElementSibling);"/>
+    <input type="button" value="下一个" onclick="change(curTarget.nextSibling.nextSibling);"/>
+    <input type="button" value="最后一个" onclick="change(curTarget.parentNode.lastChild.previousSibling);"/>
+    <script type="text/javascript">
+        var curTarget = document.getElementById('go');
+        var change = function(target) {
+            alert(target.innerHTML);
+        }
+    </script>
+</body>
+</html>

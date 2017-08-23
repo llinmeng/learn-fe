@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>访问列表项</title>
+</head>
+<body>
+    <select id="mySelect" name="mySelect" size="6">
+        <option value="js">js</option>
+        <option value="python">python</option>
+        <option value="go">go</option>
+        <option value="ruby">ruby</option>
+        <option value="c">c</option>
+        <option value="js1">js1</option>
+    </select><br/>
+    <input type="button" value="第一个" onclick="change(curTarget.options[0]);"/>
+    <input type="button" value="上一个" onclick="change(curTarget.options[curTarget.selectedIndex - 1]);"/>
+    <input type="button" value="下一个" onclick="change(curTarget.options[curTarget.selectedIndex + 1]);"/>
+    <input type="button" value="最后一个" onclick="change(curTarget.options[curTarget.length - 1]);"/>
+
+    <script type="text/javascript">
+        var curTarget = document.getElementById("js");
+        var change = function (target) {
+            alert(target.text);
+        }
+    </script>
+</body>
+</html>

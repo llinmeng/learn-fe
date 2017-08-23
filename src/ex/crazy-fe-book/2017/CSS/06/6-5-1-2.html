@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>child</title>
+    <style type="text/css">
+        li:first-child {
+            border: 2px solid blue;
+        }
+
+        li:last-child {
+            background-color: #00FF00;
+        }
+
+        li:nth-child(2) {
+            color: #ff00ff;
+        }
+
+        li:nth-last-child(2) {
+            font-weight: bold;
+        }
+
+        span:only-child {
+            font-size: 30pt;
+            font-family: "隶书";
+            color: #ca3a11;
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>Java</li>
+        <li>JavaScript</li>
+        <li>Python</li>
+        <li>go</li>
+        <li>c++</li>
+        <li>ruby</li>
+    </ol>
+    <hr/>
+    <ul>
+        <li id="java">Java 讲义</li>
+        <li id="javascript">JavaScript 讲义</li>
+        <li id="python">Python讲义</li>
+        <li id="go">Go讲义</li>
+        <li id="c++">C++讲义</li>
+        <li id="ruby">Ruby讲义</li>
+        <li><span id="android">Android 语言</span></li>
+    </ul>
+    <span>程序语言</span>
+</body>
+</html>

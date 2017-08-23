@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态添加表格内容</title>
+</head>
+<body id="test">
+    <script type="text/javascript">
+        var a = document.createElement('table');
+        a.border = 2;
+        var caption = a.createCaption();
+        caption.innerHTML = "表格标题";
+        for (var i = 0; i < 5; i++) {
+            var tr = a.insertRow(i);
+            for (var j = 0;  j < 7; j++) {
+                var td = tr.insertCell(j);
+                td.innerHTML = "单元格内容" + i + j;
+            }
+        }
+
+        document.getElementById('test').appendChild(a);
+    </script>
+</body>
+</html>

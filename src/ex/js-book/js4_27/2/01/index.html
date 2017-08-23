@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="btn" onclick="btnClicked()">按钮</button>
+    <script>
+        window.document.write("hello");
+        document.write("宽度：" + window.innerWidth + ", 高度：" + window.innerHeight);
+        function btnClicked() {
+            window.open("obindex.html", "windowname", "height = 200, width = 200, top = 100, left = 100, toolbar = no");
+            window.close();
+        }
+    </script>
+</body>
+</html>

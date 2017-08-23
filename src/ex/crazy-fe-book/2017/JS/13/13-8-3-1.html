@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function outer() {
+            function inner1() {
+                document.write('局部函数11111<br>');
+            }
+            function inner2() {
+                document.write('局部函数22222<br>');
+            }
+            document.write('开始测试局部函数.....<br>');
+            inner1();
+            inner2();
+            document.write('结束测试局部函数.....<br>');
+        }
+        document.write('调用 outer 之前.....<br>');
+        outer();
+       // inner1();
+        document.write('调用 outer 之后.....<br>');
+    </script>
+</body>
+</html>

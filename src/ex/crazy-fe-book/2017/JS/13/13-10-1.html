@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>面向对象的概念</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Person(name) {
+            this.name = name;
+        }
+        var p = new Person('yyyyy');
+
+        if (p instanceof Person)
+            document.writeln('p是 Person 的实例<br>');
+        if (p instanceof Object)
+            document.writeln('p是 Object 的实例');
+    </script>
+</body>
+</html>

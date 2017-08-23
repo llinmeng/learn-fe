@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    function Person(national, age) {
+        this.age = age;
+        Person.national = national;
+        var bb = 0;
+    }
+    var p1 = new Person('中国', 29);
+    document.writeln('创建第一个 Person 对象<br>');
+    document.writeln('p1的 age 属性为' + p1.age + '<br>');
+    document.writeln('p1的 national 属性为' + p1.national + '<br>');
+    document.writeln('通过 Person访问静态 national 属性为' + Person.national + '<br>')
+    document.writeln('p1的 bb 属性为' + p1.bb + '<br><hr>');
+
+    var p2 = new Person('美国', 32);
+    document.writeln('创建两个 Person 对象之后<br>');
+    document.writeln('p1的 age 属性为' + p1.age + '<br>');
+    document.writeln('p1的 national 属性为' + p1.national + '<br>');
+    document.writeln('p2的 age 属性为' + p2.age + '<br>');
+    document.writeln('p2的 national 属性为' + p2.national + '<br>');
+    document.writeln('通过 Person访问静态 national 属性为' + Person.national + '<br>')
+</script>
+</body>
+</html>

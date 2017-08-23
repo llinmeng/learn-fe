@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 继承和 prototype </title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.info = function () {
+                document.writeln('姓名: ' + this.name);
+                document.writeln('年龄: ' + this.age);
+            }
+        }
+
+        var p1 = new Person('li', 20);
+        p1.info();
+        document.writeln("<hr/>");
+
+        var p2 = new Person("huang", 25);
+        p2.info();
+    </script>
+</body>
+</html>

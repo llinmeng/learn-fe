@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 多栏布局 </title>
+    <style type="text/css">
+        body {
+            margin: 0px;
+        }
+
+        div#container {
+            width: 960px;
+            margin: auto;
+        }
+
+        div>div {
+            border: 5px solid black;
+            display: inline-block;
+            vertical-align: top;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border-radius: 12px 12px 0px 0px;
+            background-color: #ffff00;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div style="width: 220px;">
+            .............内容
+        </div>
+        <div style="width: 300px;">
+            .............内容
+        </div>
+        <div style="width: 240px;">
+            .............内容
+        </div>
+    </div>
+</body>
+</html>

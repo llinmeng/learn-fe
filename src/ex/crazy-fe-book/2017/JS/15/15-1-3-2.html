@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <input id="bn1" type="button" value="按钮1" onclick="alert(this.value);"/>
+    <input id="bn2" type="button" value="按钮2"/>
+    <input id="bn3" type="button" value="按钮3"/>
+
+    <script type="text/javascript">
+        var test = function () {
+            alert(this.value);
+        }
+
+        document.getElementById("bn2").onclick = test;
+
+        var p = {
+            value: 'p 对象',
+            info: function () {
+                alert(this.value);
+            }
+        }
+
+        document.getElementById("bn3").onclick = p.info;
+        p.info();
+    </script>
+</body>
+</html>

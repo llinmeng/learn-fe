@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 盒模型实现多栏布局 </title>
+    <style type="text/css">
+        body {
+            margin: 0px;
+        }
+
+        div#container {
+            display: box;
+            display: -moz-box;
+            display: -webkit-box;
+            width: 960px;
+            text-align: left;
+        }
+        #container>div {
+            border: 5px solid #ff00ff;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border-radius: 12px 12px 0px 0px;
+            background-color: #2db7f5;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div style="width: 220px;">
+            <h2>信息</h2>
+            <ul>
+                <li>........1</li>
+                <li>........2</li>
+                <li>........3</li>
+            </ul>
+        </div>
+
+        <div style="width: 500px;">
+            <h2>介绍</h2>
+            &nbsp;&nbsp;&nbsp;&nbsp;地方 v 不过 i 回成都覆盖还让他于冠华酱豆腐依法合规
+            iu 发一条当天发货呢 CV 不耐烦更好听今天又范甘迪 v 不错 v 吃 v 本地风光还让他雨
+            大法官海加尔洪金宝彭佳慧 v 哦光伏发电土豆丝无水洗车 v 很过分 iu 电热毯一 i 发 v 吧.<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;地方 v 不过 i 回成都覆盖还让他于冠华酱豆腐依法合规
+            iu 发一条当天发货呢 CV 不耐烦更好听今天又范甘迪 v 不错 v 吃 v 本地风光还让他雨
+            大法官海加尔洪金宝彭佳慧 v 哦光伏发电土豆丝无水洗车 v 很过分 iu 电热毯一 i 发 v 吧.<br/>
+        </div>
+
+        <div style="width: 240px;">
+            <h2>动态</h2>
+            <ul>
+                <li>SD 覆盖合家快乐</li>
+                <li>犬瘟热体育 i 哦朋</li>
+                <li>自行车 v 不能说的法国红酒看</li>
+                <li>犬瘟热体育 i 噢噢回归方程半年内发</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>在代码中触发事件</title>
+</head>
+<body>
+    <h2>脚本触发事件</h2>
+    <form method="post" name="register" action="15-1-3-1.html">
+        用户名: <input type="text" name="user"/><br/>
+        密&nbsp;&nbsp;码: <input type="password" name="pass"/><br/>
+        邮&nbsp;&nbsp;件: <input type="text" name="email"/><br/>
+        <input type="button" id="register" value="提交"/>
+    </form>
+
+    <script type="text/javascript">
+        String.prototype.trim = function () {
+            return this.replace(/^\s*/, "").replace(/\s*$/, "");
+        }
+
+        var check = function () {
+            var form = document.forms[0];
+            var errStr = "";
+            if(form.user.value === null
+                || form.user.value.trim() === "") {
+                errStr += "\n用户名不能为空";
+                form.user.focus();
+            }
+
+            if(form.pass.value === null
+                || form.pass.value.trim() === ""){
+                errStr += "\n密码不能为空";
+                form.pass.focus();
+            }
+
+            if(form.email.value === null
+                || form.email.value.trim() === ""){
+                errStr += "\n电子邮件不能为空";
+                form.email.focus();
+            }
+
+            if (errStr != "") {
+                alert(errStr);
+            } else {
+                form.submit();
+            }
+        }
+
+        document.getElementById("register").onclick = check;
+    </script>
+</body>
+</html>

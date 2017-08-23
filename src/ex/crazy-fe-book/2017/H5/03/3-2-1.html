@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5为表单控件新增属性</title>
+</head>
+<body>
+    <!-- - form属性 - -->
+    <form id="addForm" action="add">
+        物品名: <input type="text" name="name"/>
+        <input type="submit" value="添加"/>
+    </form>
+    物品描述: <textarea name="desc" form="addForm"></textarea>
+    <hr/>
+    <hr/>
+
+    <!-- - formaction属性 - -->
+    <form method="post">
+        用户名: <input type="text" name="name"/><br/>
+        密码: <input type="password" name="password"/><br/>
+        <input type="submit" value="注册" formaction="regist"/>
+        <input type="submit" value="修改" formaction="login"/>
+    </form>
+
+    <hr/>
+    <hr/>
+
+    <!-- - formxxx 属性 - -->
+    <form method="post" action="pro">
+        用户名: <input type="text" name="name"/><br/>
+        密码: <input type="password" name="password"/><br/>
+        <input type="submit" value="GET提交" formmethod="get"/>
+        <input type="submit" value="POST提交" formmethod="post"/>
+    </form>
+    <hr/>
+    <nr/>
+
+    <!-- - placeholder属性(提示信息) - -->
+    <!-- - autofocus属性(自动获得焦点) - -->
+    <form mehtod="post">
+        用户名: <input type="text" name="name" placeholder="请输入用户名" autofocus="autofocus"/><br/>
+        密码: <input type="password" name="password" placeholder="请输入密码"/><br/>
+        <input type="submit" value="注册"/>
+        <input type="submit" value="修改"/>
+    </form>
+    <hr/>
+    <hr/>
+
+    <!-- - list 属性 - -->
+    <form method="post" action="buy">
+        请输入图书: <input type="text" name="name" list="books"/><br/>
+        <input type="submit" value="购买"/>
+    </form>
+    <datalist id="books">
+        <option value="javascript">javascript 讲义</option>
+        <option value="python">python 讲义</option>
+        <option value="c">c 讲义</option>
+    </datalist>
+</body>
+</html>
+
+

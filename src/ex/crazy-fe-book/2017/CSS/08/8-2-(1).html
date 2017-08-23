@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 边框相关属性测试 </title>
+    <style type="text/css">
+        div {
+            width: 300px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+border: 5px solid #ff6666;
+<div style="border: 5px solid #ff6666;">测试文字 - 实线边框</div><hr/>
+
+border: 2px dashed #ff00ff;
+<div style="border: 2px dashed #ff00ff;">测试文字 - 虚线边框</div><hr/>
+
+border: 2px dotted #00FF00;
+<div style="border: 2px dotted #00FF00;">测试文字 - 点线边框</div><hr/>
+
+border: 5px groove #ffff00;
+<div style="border: 5px groove blue;">测试文字 - 凹槽边框</div><hr/>
+
+border: 5px inset #ff0000;
+<div style="border: 5px inset #ff0000;">测试文字  - 凹入边框</div><hr/>
+
+border: 5px outset #ff9900;
+<div style="border: 5px outset #ff9900;">测试文字 -凹出边框</div><hr/>
+
+border: 5px double #2db7f5;
+<div style="border: 5px double #2db7f5;">测试文字 -双线边框</div><hr/>
+
+border-width: 8px 2px; border-style: solid dashed; border-color: #6600cc #ff3300;
+<div style="border-width: 8px 2px; border-style: dotted dashed; border-color: #6600cc #ff3300;">
+    上下两个边框样式 - 左右两个边框样式
+</div><hr/>
+
+border-width: 8px; border-style: solid; border-color: #00FF00 #ffff00 #ff00ff #0000ff;
+<div style="border-width: 8px; border-style: solid; border-color: #00FF00 #ffff00 #ff00ff #0000ff;">
+    四个颜色不同的边框做出的立体效果
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>配合 quotes 属性执行插入</title>
+    <style type="text/css">
+        div>div {
+            quotes: "<<" ">>";
+        }
+
+        div>div:before {
+            content: open-quote;
+        }
+
+        div>div:after {
+            content: close-quote;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>Java讲义</div>
+        <div>JavaScript 讲义</div>
+        <div>Android 讲义</div>
+    </div>
+</body>

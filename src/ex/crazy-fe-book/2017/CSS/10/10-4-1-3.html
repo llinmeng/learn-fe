@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 分栏布局 </title>
+    <style type="text/css">
+        div#container {
+            margin: auto;
+            width: 840px;
+            border: 5px groove red;
+        }
+
+        div#content {
+            /* - 设置格栏目宽度, 栏目数*/
+            columns: 240px 3;
+            -webkit-columns: 240px 3;
+            -moz-columns: 240px 3;
+            -o-moz-columns: 240px 3;
+
+            /* - 设置栏目之间的间距 - */
+            -o-column-gap: 50px;
+            -moz-column-gap: 50px;
+            -webkit-column-gap: 50px;
+            column-gap: 50px;
+
+            /* - 设置栏目之间的分隔条 - */
+            column-rule: 10px double green;
+            -moz-column-rule: 10px double green;
+            -o-column-rule: 10px double green;
+            -webkit-column-rule: 10px double green;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="content">
+            <h2>介绍</h2>
+            &nbsp;&nbsp;&nbsp;&nbsp;地方 v 不过 i 回成都覆盖还让他于冠华酱豆腐依法合规
+            iu 发一条当天发货呢 CV 不耐烦更好听今天又范甘迪 v 不错 v 吃 v 本地风光还让他雨
+            大法官海加尔洪金宝彭佳慧 v 哦光伏发电土豆丝无水洗车 v 很过分 iu 电热毯一 i 发 v 吧.<br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;地方 v 不过 i 回成都覆盖还让他于冠华酱豆腐依法合规
+            iu 发一条当天发货呢 CV 不耐烦更好听今天又范甘迪 v 不错 v 吃 v 本地风光还让他雨
+            大法官海加尔洪金宝彭佳慧 v 哦光伏发电土豆丝无水洗车 v 很过分 iu 电热毯一 i 发 v 吧.<br/>
+        </div>
+    </div>
+</body>
+</html>

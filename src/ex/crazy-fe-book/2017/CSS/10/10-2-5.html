@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 表格相关的盒模型 </title>
+    <style type="text/css">
+        div>div {
+            display: table-row;
+            padding: 10px;
+        }
+
+        div>div>div {
+            display: table-cell;
+            border: 5px ridge blue;
+        }
+    </style>
+</head>
+<body>
+    <div style="display: table; width: 400px;">
+        <div style="display: table-caption;">JavaScript</div>
+        <div>
+            <div>JavaScript 语言</div>
+            <div>Python 语言</div>
+        </div>
+        <div>
+            <div>Java 语言</div>
+            <div>Go 语言</div>
+        </div>
+    </div>
+</body>
+</html>

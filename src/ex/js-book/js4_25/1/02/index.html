@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        document.write("hello, javascript");
+    </script>
+</head>
+<body>
+    <script>
+        document.write("hello, javascript");
+    </script>
+
+    <!--顺序执行， 覆盖(pid)-->
+    <p id="pid">Hello</p>
+    <script>
+        document.getElementById("pid").innerHTML="baidu.com";
+    </script>
+    <script>
+        document.getElementById("pid").innerHTML="www.baidu.com";
+    </script>
+    <script>
+        document.getElementById("pid").innerHTML="www.baidu";
+    </script>
+
+    <!-- 依次打印 -->
+    <script>
+        document.write("hello1");            //打印输出
+        document.write("hello2");
+        document.write("hello3");
+        /*
+        document.write("hello1");
+        document.write("hello2");
+        document.write("hello3");
+        */
+    </script>
+    <br/>
+    <br/>
+    <script>
+        document.write("hello1");
+    </script>
+    <br/>
+    <script>
+        document.write("hello2");
+    </script>
+    <br/>
+    <script>
+        document.write("hello3");
+    </script>
+
+    <!-- 大小写敏感 -->
+    <!-- 空格无影响 -->
+    <!-- 注释：//   /**/>
+</body>
+</html>

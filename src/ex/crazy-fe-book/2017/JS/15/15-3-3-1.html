@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>事件传播</title>
+</head>
+<body>
+    友情链接: <br/>
+    <a id="mylink" href="15-1-1.html">JS</a>
+    <div id="show"></div>
+    <script type="text/javascript">
+        //事件捕获阶段的处理函数
+        var killClick1 = function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            document.getElementById("show").innerHTML += "事件捕获阶段" + event.currentTarget + "<br/";
+        }
+
+        //事件冒泡阶段的处理函数
+        var killClick2 = function (event) {
+            event.preventDefault();
+            event.stopPropagation();
+            document.getElementById("show").innerHTML += "事件冒泡阶段" + event.currentTarget + "<br/>";
+        }
+
+//        document.addEventListener("click", killClick1, true);
+//        document.getElementById("mylink").addEventListener("click", killClick1, true);
+        document.addEventListener("click", killClick2, false);
+        document.getElementById("mylink").addEventListener("click", killClick2, false);
+    </script>
+</body>
+</html>

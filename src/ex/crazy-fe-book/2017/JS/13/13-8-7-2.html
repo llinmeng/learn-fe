@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Dog(name, age, bark) {
+            this.name = name;
+            this.age = age;
+            this.bark = bark;
+            this.info = function () {
+                return this.name + '的年龄为: ' + this.age + ', 它的叫声: ' + this.bark;
+            }
+        }
+
+        var dog = new Dog('旺财', 3, '汪汪, 汪汪......');
+        function Cat(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        var cat = new Cat("kitty", 2);
+        alert(dog.info.call(cat));
+    </script>
+</body>
+</html>

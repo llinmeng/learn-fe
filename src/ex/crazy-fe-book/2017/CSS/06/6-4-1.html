@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>内容相关的属性</title>
+    <style type="text/css">
+        div>div:before {
+            content: 'CrazyIt:';
+            color: blue;
+            font-weight: bold;
+            background-color: gray;
+        }
+
+        div:after {
+            content: 'aaaaa - ';
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>Java讲义</div>
+        <div>JavaScript 讲义</div>
+        <div>Android 讲义</div>
+    </div>
+</body>
+</html>

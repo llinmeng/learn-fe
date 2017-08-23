@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> inline-table 盒模型 </title>
+    <style type="text/css">
+        td {
+            border: 5px solid blue;
+        }
+
+        table {
+            width: 360px;
+            border-collapse: collapse;
+            display: inline-table;
+            vertical-align: top;    /* - 顶端对齐 - */
+            /* - vertical-align:  bottom;    !* - 底端对齐 - *! - */
+        }
+    </style>
+</head>
+<body>
+    前面内容
+    <table style="">
+        <tr><td>Java 语言</td><td>JavaScript 语言</td></tr>
+        <tr><td>Python 语言</td><td>Go 语言</td></tr>
+    </table>
+    后面内容
+    <hr/>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div">
+        <button id="btn" onclick="demo()">按钮</button>
+        <a href="http://www.baidu.com" id="aid">百度</a>
+    </div>
+    <script>
+        document.getElementById("btn").addEventListener("click", showType1);
+        function showType1(event) {
+        //    alert(event.type);                          //获取事件类型
+            alert(event.target);
+            event.stopPropagation();                //阻止事件冒泡
+        }
+
+       /* document.getElementById("btn").addEventListener("mouseover", showType2);
+        function showType2(event) {
+            alert(event.type);                          //获取事件类型
+        }*/
+
+        document.getElementById("div").addEventListener("click", showDiv);      //事件冒泡,事件向上传递
+        function showDiv() {
+            alert("div");
+        }
+
+        document.getElementById("aid").addEventListener("click", showA);
+        function showA(event) {
+            event.stopPropagation();
+            event.preventDefault();                 // 阻止事件默认行为
+        }
+    </script>
+</body>
+</html>

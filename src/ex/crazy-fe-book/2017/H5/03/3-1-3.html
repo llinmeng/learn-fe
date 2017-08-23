@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>s使用 label 定义标签</title>
+</head>
+<body>
+    <!--让标签与表单控件关联(获得焦点)的两种方式: 1 - for, 2 - 显示关联-->
+    <form action="http://www.baidu.com" method="get">
+        <!-- - 1 - -->
+        <label for="username">单行文本框: </label>
+        <input id="username" name="username" type="text"><br/>
+        <!-- - 2 - -->
+        <label>密码框: <input id="password" name="password" type="password"></label><br/>
+        <input id="ok" type="submit" value="登录">
+    </form>
+</body>
+</html>
+
+

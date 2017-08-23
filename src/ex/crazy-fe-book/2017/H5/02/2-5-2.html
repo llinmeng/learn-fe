@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>可拖动之放</title>
+</head>
+<body>
+    <div id="source" style="width: 80px; height: 80px; border: 2px solid blue; background-color: #bbb;" draggable="true">
+        可拖动的操作</div>
+<script type="text/javascript">
+    var source = document.getElementById("source");
+
+    source.ondragstart = function(evt) {
+        //让拖动操作携带数据
+        evt.dataTransfer.setData("text/plain", "www.baidu.com");
+    }
+
+    document.ondragover = function (evt) {
+        //取消document 对拖动事件的默认行为
+        return false;
+    }
+
+    /*- 2 -*/
+   /* document.ondrop = function (evt) {
+        //取消拖放操作的默认动作
+        return false;
+    }*/
+
+   document.ondrop = function (evt) {
+       source.style.position = "absolute";
+       source.style.left = evt.pageX + "px";
+       source.style.top = evt.pageY + "px";
+       return false;
+   }
+</script>
+</body>
+</html>
+
+

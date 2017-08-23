@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>子选择器</title>
+    <style type="text/css">
+        div {
+            width: 350px;
+            height: 60px;
+            background-color: #dddddd;
+            margin: 5px;
+        }
+        div>.a {
+            width: 200px;
+            height: 35px;
+            border: 2px dotted blue;
+            background-color: #88ee88;
+        }
+    </style>
+</head>
+<body>
+    <div>没有任何属性的 div 元素</div>
+    <div><p class="a">class 属性为 a 且是 div 的子节点的元素</p> </div>
+    <div><section><p class="a">class 属性为 a 且处于 div 内部的元素</p> </section></div>
+</body>
+</html>

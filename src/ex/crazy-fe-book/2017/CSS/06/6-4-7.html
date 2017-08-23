@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>添加多级编号</title>
+    <style type="text/css">
+        div>h2 {
+            counter-increment: categorycounter;
+            counter-reset: subcounter;      /*第二级编号从一开始*/
+        }
+
+        div>div {
+            counter-increment: subcounter;
+        }
+
+        div>h2:before {
+            content: counter(categorycounter, georgian) '.';
+            font-size: 20pt;
+            /*font-weight: bold;*/
+        }
+
+        div>div:before {
+            content: '第' counter(subcounter, cjk-ideographic) '本.';
+            font-size: 14pt;
+            font-weight: bold;
+            margin-left: 24px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>图书</h2>
+        <div>Java讲义</div>
+        <div>JavaScript 讲义</div>
+        <div>Android 讲义</div>
+        <div>Python讲义</div>
+        <h2>语言</h2>
+        <div>Python 语言</div>
+        <div>Go语言</div>
+        <div>JavaScript 语言</div>
+    </div>
+</body>

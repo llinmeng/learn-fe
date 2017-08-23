@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script>
+        var a = ["hello", "world"];
+        var b = ["meng", "mm"];
+        var c = a.concat(b);        //合并
+        document.write(c);
+        var d = ["a", "c", "b", "t", "e"];
+        document.write(d.sort());       //排序
+        document.write(d.sort(function (a, b){
+            return b-a;
+        }));
+
+        var e = ["a", "b"];
+        a.push("c");        //追加（末尾）
+        document.write(e);
+
+        var f = ["a", "f", "d"]
+        document.write(f.reverse());     //翻转
+    </script>
+</body>
+</html>

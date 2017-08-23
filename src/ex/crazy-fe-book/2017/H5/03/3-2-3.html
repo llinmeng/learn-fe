@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HTML5新增的表单控件</title>
+</head>
+<body>
+    <form action="do">
+        <input id="color1" name="color1" type="color"/>
+        <output name="a" for="color1" onforminput="innerHTML=color1.value;"></output>
+        <p/>
+        <input id="range1" name="range1" type="range" min="0" max="100" step="5"/>
+        <output name="b" for="range1" onforminput="innerHTML=range1.value;"></output>
+        <p/>
+        <input value="提交" type="submit"/>
+    </form>
+</body>
+</html>
+
+

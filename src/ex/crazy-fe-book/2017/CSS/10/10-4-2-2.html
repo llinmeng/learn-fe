@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 垂直排列 </title>
+    <style type="text/css">
+        div#container {
+            border: 5px double #6600cc;
+            padding: 5px;
+            width: 600px;
+            height: 300px;
+            display: box;
+            display: -moz-box;
+            display: -webkit-box;
+            -webkit-box-orient: vertical;
+            -moz-box-orient: vertical;
+            box-orient: vertical;
+        }
+
+        div>div{
+            border: 5px solid #ff0000;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border-radius: 12px 12px 0px 0px;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div>栏目一</div>
+        <div>栏目二</div>
+        <div>栏目三</div>
+    </div>
+</body>
+</html>

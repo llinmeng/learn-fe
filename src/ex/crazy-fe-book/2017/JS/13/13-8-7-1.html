@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>函数的独立性</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Person(name) {
+            this.name = name;
+            this.info = function () {
+                alert("name == " + this.name);
+            }
+        }
+        var p = new Person('yyyy');
+        p.info();
+        var name = '测试名称';
+        p.info.call(window);
+    </script>
+</body>
+</html>

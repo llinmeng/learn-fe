@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>可拖动</title>
+</head>
+<body>
+    <!--1-->
+    <a href="2-3-1.html">链接</a>
+    <img src="img/2-1-8.jpg" alt="图片"/>
+
+
+    <hr/>
+    <hr/>
+    <!--2-->
+    <div id="source" style="width: 80px; height: 80px; border: 2px solid blue; background-color: #bbb;" draggable="true">可拖动的操作</div>
+    <script type="text/javascript">
+        var source = document.getElementById("source");
+        source.ondragstart = function(evt) {
+            //让拖动操作携带数据
+            evt.dataTransfer.setData("text/plain", "2-3-1.html");
+        }
+    </script>
+</body>
+</html>
+
+

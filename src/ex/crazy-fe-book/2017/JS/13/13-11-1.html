@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>使用 new 关键字调用构造器创建对象</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        var p1 = new Person();
+        var p2 = new Person('li', 24);
+        document.write('p1的属性如下: ' + p1.name + p1.age + '<br>');
+        document.write('p2的属性如下: ' + p2.name + p2.age);
+    </script>
+</body>
+</html>

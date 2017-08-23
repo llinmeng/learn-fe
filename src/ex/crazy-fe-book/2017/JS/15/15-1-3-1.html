@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> this 关键字</title>
+</head>
+<body>
+    <input type="button" value="按钮" name="bn" onclick="showThisName();"/>
+    <script type="text/javascript">
+        window.name = "测试窗口";
+        var showThisName = function () {
+            alert(this.name);
+        }
+    </script>
+</body>
+</html>

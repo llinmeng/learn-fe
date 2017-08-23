@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>继承和 prototype</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+            this.info = function () {
+                document.writeln('姓名: ' + this.name + '<br>');
+                document.writeln('年龄: ' + this.age + '<br>');
+            }
+        }
+
+        var p1 = new Person('li', 29);
+        p1.info();
+        Person.prototype.walk = function () {
+            document.writeln(this.name + '.......' + '<br>');
+        }
+        document.writeln('<hr>');
+        var p2 = new Person('meng', 24);
+        p2.info();
+        document.write('<hr>');
+        p2.walk();
+        p1.walk();
+    </script>
+</body>
+</html>

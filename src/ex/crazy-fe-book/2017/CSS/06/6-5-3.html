@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>UI 元素状态的伪类选择器</title>
+    <style type="text/css">
+        td {
+            border: 2px solid red;
+            padding: 10px;
+        }
+        /* - 被选中的内容 - */
+        ::selection {
+            background-color: blue;
+            color: whitesmoke;
+        }
+
+        ::-moz-selection {
+            background-color: green;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <table style="width: 400px; border-collapse: collapse">
+        <tr>
+            <td>Java讲义</td>
+            <td>JavaScript 讲义</td>
+        </tr>
+        <tr>
+            <td>Python 讲义</td>
+            <td>C++讲义</td>
+        </tr>
+        <tr contentEditable="true">
+            <td>Android 讲义</td>
+            <td>Go 语言</td>
+        </tr>
+    </table>
+    <input type="text" readonly value="只读的文本框"/>
+    <input type="text" value="可读写的文本框"/>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>校验属性</title>
+</head>
+<body>
+    <form action="add">
+        图书名: <input name="name" type="text" required/><br/>
+        图书 ISBN: <input name="isbn" type="text" required pattern="\d{3}-\d-\d{3}-\d{5}"/><br/>
+        图书价格: <input name="price" type="number" min="20" max="150" step="5"/><br/>
+        <input type="submit" value="提交"/>
+    </form>
+</body>
+</html>
+
+

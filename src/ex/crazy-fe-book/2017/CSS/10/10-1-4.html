@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> overflow 属性 </title>
+    <style type="text/css">
+        div {
+            width: 300px;
+            height: 70px;
+            border: 2px solid red;
+            white-space: nowrap;
+            margin: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h3>不设置 overflow 属性</h3>
+        测试文字测试文字测试文字测试文字测试文字测试文字
+    </div><hr/>
+
+    <div style="overflow: hidden;">
+        <h3>overflow: hidden;</h3>
+        测试文字测试文字测试文字测试文字测试文字测试文字
+    </div><hr/>
+
+    <div style="overflow: auto;">
+        <h3>overflow: auto;</h3>
+        测试文字测试文字测试文字测试文字测试文字测试文字
+    </div><hr/>
+
+    <div style="overflow-x: hidden;">
+        <h3>overflow-x: hidden;</h3>
+        测试文字测试文字测试文字测试文字测试文字测试文字
+    </div><hr/>
+
+    <div style="overflow-y: hidden;">
+        <h3>overflow-y: hidden;</h3>
+        测试文字测试文字测试文字测试文字测试文字测试文字
+    </div><hr/>
+</body>
+</html>

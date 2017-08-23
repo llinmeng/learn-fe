@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素选择器 - :first-letter</title>
+    <style type="text/css">
+        span {
+            display: block;
+        }
+
+        span:first-letter {
+            color: #ffff00;
+            font-size: 20pt;
+        }
+
+        section:first-letter {
+            color: #ff00ff;
+            font-size: 30pt;
+            font-weight: bold;
+        }
+
+        p:first-letter {
+            color: #00FF00;
+            font-size: 40pt;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <span>abc</span>
+    <section><div>其实我是一个程序媛</div></section>
+    <p>JavaScript 讲义</p>
+</body>
+</html>

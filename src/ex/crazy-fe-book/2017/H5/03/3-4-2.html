@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>checkValidity 方法</title>
+</head>
+<body>
+    <form action="add">
+        生日: <input id="brith" name="brith" type="date"/><br/>
+        邮件地址: <input id="email" name="email" type="email" onclick="check();"/><br/>
+        <input type="submit" value="提交"/>
+    </form>
+    <script type="text/javascript">
+        var check = function () {
+            return commonCheck("brith", "生日", "字段必须是有效日期!") && commonCheck("email", "邮件地址", "字段必须符合电子邮件的格式!");
+        }
+
+        var commonCheck = function (field, fieldName, tip) {
+            var targetEle = document.getElementById(field);
+            //字段值为空
+            if(targetEle.value.trim() == "") {
+                alert(fieldName + "字段必须填写!");
+                return false;
+            } else if (!targetEle.checkValidity()) {
+                alert(fieldName + tip);
+                return false;
+            }
+            return false;
+        }
+    </script>
+</body>
+</html>
+
+

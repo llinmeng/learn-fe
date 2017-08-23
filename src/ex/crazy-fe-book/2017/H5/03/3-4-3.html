@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义错误提示</title>
+</head>
+<body>
+    <form action="add">
+        图书名: <input id="name" name="name" type="text" required/><br/>
+        图书 ISBN: <input id="isbn" nmae="isbn" type="text" required pattern="\d{3}-\d-\d{3}-\d{5}"/><br/>
+        图书价格: <input id="price" name="price" type="number" min="20" max="150" step="5"/><br/>
+        <input type="submit" value="提交" onclick="check();"/>
+    </form>
+    <script type="text/javascript">
+        var check = function () {
+            if(!document.getElementById("name").checkValidity()) {
+                document.getElementById("name").setCustomValidity("图书名是必须填写的!");
+            }
+            if(!document.getElementById("isbn").checkValidity()) {
+                document.getElementById("isbn").setCustomValidity("图书 ISBN 必须填写, " + "\n 而且必须符合 xxx-x-xxx-xxxxx 的格式(其中 x 代表数字).");
+            }
+            if(!document.getElementById("price").checkValidity()) {
+                document.getElementById("price").setCustomValidity("图书价格必须填写," + "\n 而且必须再20~150之间, 且是5的倍数.");
+            }
+        };
+    </script>
+</body>
+</html>
+
+

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 隐藏元素 </title>
+    <style type="text/css">
+        div {
+            width: 300px;
+            height: 40px;
+            background-color: #42b983;
+            border: 2px dashed magenta;
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value="隐藏" onclick="document.getElementById('test1').style.display='none';"/>
+    <input type="button" value="显示" onclick="document.getElementById('test1').style.display='';"/>
+    <div id="test1">
+        使用 display 控制对象的显示和隐藏
+    </div><hr/>
+
+    <input type="button" value="隐藏" onclick="document.getElementById('test2').style.visibility='hidden';"/>
+    <input type="button" value="显示" onclick="document.getElementById('test2').style.visibility='visible';"/>
+    <div id="test2">
+        使用 visibility 控制对象的显示和隐藏
+    </div><hr/>
+</body>
+</html>

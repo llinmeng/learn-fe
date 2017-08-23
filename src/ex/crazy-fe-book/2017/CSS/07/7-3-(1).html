@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文本相关属性设置</title>
+    <style type="text/css">
+        div {
+            border: 2px dotted blue;
+            height: 30px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <!-- - 缩进 - -->
+    text-indent: 20pt <div style="text-indent: 20pt;">测试文字</div>
+    text-indent: 40pt <div style="text-indent: 40pt;">测试文字</div>
+    text-align: center <div style="text-align: center;">测试文字</div>
+    text-align: right <div style="text-align: right;">测试文字</div>
+    direction: rtl <div style="direction: rtl;">测试文字</div>
+    direction: ltr <div style="direction: ltr;">测试文字</div>
+    <!-- - 强制不换行, 直到遇到 br 标签 - -->
+    white-space: nowrap <div style="white-space: nowrap;">测试文字, Java 讲义, Python讲义</div>
+    <!-- - 当文字溢出时, 只是简单地裁切 - -->
+    text-overflow: clip <div style="overflow: hidden; white-space: nowrap; text-overflow: clip;">测试文字测试文字测试文字测试文字测试文字</div>
+    <!-- - 裁切后显示裁切标记 - -->
+    text-overflow: ellipsis <div style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;">测试文字, 测试文, 测试文字, 测试文字, 测试文字</div>
+</body>
+</html>

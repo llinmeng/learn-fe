@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> clip 属性 </title>
+    <style type="text/css">
+        div {
+            position: absolute;
+            font-size: 30pt;
+            border: 2px solid blue;
+            background-color: #CCCC66;
+            width: 550px;
+            padding: 5px;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div style="top: 0px; clip: rect(16px,400px,auto,30px);">
+        rect(16px,400px,auto,30px);
+    </div><hr/>
+
+    <div style="top: 120px; clip: rect(24px,480px,auto,60px);">
+        rect(24px,480px,auto,60px);
+    </div><hr/>
+
+    <div style="top: 240px; clip: rect(36px,520px,auto,90px);">
+        rect(36px,520px,auto,90px);
+    </div><hr/>
+
+    <div style="top: 360px; clip: rect(36px,auto,auto,120px);">
+        rect(36px,auto,auto,120px);
+    </div><hr/>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>删除列表框, 下拉菜单的选项</title>
+</head>
+<body>
+    <input id="opValue" type="text"/>
+    <input id="add" type="button" value="增加" onclick="add();"/>
+    <input id="del" type="button" value="删除" onclick="del();"/>
+    <br/>
+
+    <select id="show" size="8" style="width: 120px;"></select>
+
+    <script type="text/javascript">
+        var show = document.getElementById('show');
+        var add = function () {
+            var op = new Option(document.getElementById('opValue').value);
+            show.options[show.options.length] = op;
+        }
+
+        var del = function () {
+            if(show.options.length > 0) {
+                show.remove(show.options.length - 1);
+            }
+        }
+    </script>
+</body>
+</html>

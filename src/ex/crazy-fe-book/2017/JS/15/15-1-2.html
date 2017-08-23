@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>绑定 DOM 对象属性</title>
+</head>
+<body>
+<div>
+    <h2>数据校验表单</h2>
+    <form method="post" id="register" name="register" action="#">
+        用户名: <input type="text" name="user"/><br/>
+        密&nbsp;&nbsp;码: <input type="password" name="pass"/><br/>
+        邮&nbsp;&nbsp;件: <input type="text" name="email"/><br/>
+        <input type="submit" value="提交"/>
+    </form>
+</div>
+
+<script type="text/javascript">
+    String.prototype.trim = function () {
+        //截取空格
+        return this.replace(/^\s*/, "").replace(/\s*$/, "");
+    }
+    var check = function () {
+        var form = document.forms[0];
+        var errStr = "";
+        if(form.user.value == null || form.user.value.trim() == "") {
+            errStr += "\n 用户名不能为空";
+            form.user.focus();
+        }
+
+        if(form.pass.value == null || form.pass.value.trim() == ""){
+            errStr += "\n 密码不能为空";
+            form.pass.focus();
+        }
+
+        if(form.email.value == null || form.email.value.trim() == ""){
+            errStr += "\n 电子邮件不能为空";
+            form.email.focus();
+        }
+
+        if(!/^w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/.test(form.email.value.trim())) {
+            errStr += "\n 电子邮件格式不正确";
+            form.email.focus();
+        }
+
+        if(errStr != "") {
+            alert(errStr);
+            return false;
+        }
+    }
+
+    document.forms[0].onsubmit = check;
+</script>
+</body>
+</html>

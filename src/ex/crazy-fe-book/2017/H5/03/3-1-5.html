@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>列表框和下拉菜单</title>
+</head>
+<body>
+    <form action="http://www.baidu.com" method="get">
+        下面是简单下拉菜单: <br/>
+        <select id="skills" name="skills">
+            <option value="javascript">javascript</option>
+            <option value="python">python</option>
+            <option value="ruby">ruby</option>
+        </select><br/><br/><br/>
+        下面是允许多选的列表框: <br/>
+        <select id="books" name="books" multiple="multiple" size="3">
+            <option value="javascript">javascript 讲义</option>
+            <option value="python">python 讲义</option>
+            <option value="ruby">ruby 讲义</option>
+            <option value="java">java 讲义</option>
+        </select><br/><br/><br/>
+        下面是允许多选的列表框: <br/>
+        <select id="books2" name="books2" multiple="multiple" size="4">
+            <optgroup label="讲义">
+                <option value="javascript">javascript 讲义</option>
+                <option value="python">python 讲义</option>
+                <option value="ruby">ruby 讲义</option>
+                <option value="java">java 讲义</option>
+            </optgroup>
+            <optgroup label="语言">
+                <option value="javascript">javascript语言</option>
+                <option value="python">python语言</option>
+                <option value="ruby">ruby语言</option>
+            </optgroup>
+        </select><br/><br/><br/>
+        <button type="submit"><b>提交</b></button>
+    </form>
+</body>
+</html>
+
+

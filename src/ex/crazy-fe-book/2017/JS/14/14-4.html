@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>修改 HTML 元素</title>
+</head>
+<body>
+    改变第<input id="row" type="text" size="2"/>行,
+    第<input id="cel" type="text" size="2"/>列的值为:
+    <input id="celVal" type="text" size="16"/><br/>
+    <input id="chg" type="button" value="改变" onclick="change();"/>
+    <table id="d" border="1">
+        <tr>
+            <td>JavaScript</td>
+            <td>js</td>
+        </tr>
+        <tr>
+            <td>python</td>
+            <td>go</td>
+        </tr>
+        <tr>
+            <td>c</td>
+            <td>c++</td>
+        </tr>
+    </table>
+
+    <script type="text/javascript">
+        var change = function () {
+            var tb = document.getElementById('d');
+            var row = document.getElementById('row').value;
+            row = parseInt(row);
+            if(isNaN(row)) {
+                alert("要修改的行必须是整数!");
+                return false;
+            }
+            var cel = document.getElementById('cel').value;
+            cel = parseInt(cel);
+            if(isNaN(cel)) {
+                alert("要修改的列必须是整数!");
+                return false;
+            }
+            if(row > tb.rows.length || cel > tb.rows.item(0).cells.length) {
+                alert("要修改的单元格不在表格内!");
+                return false;
+            }
+            tb.rows.item(row - 1).cells.item(cel - 1).innerHTML = document.getElementById('celVal').value;
+        }
+    </script>
+</body>
+</html>

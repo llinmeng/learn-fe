@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FileList 对象和 File对象</title>
+</head>
+<body>
+    <!-- - 可多选 - -->
+    浏览图片: <input id="images" type="file" multiple="multiple" accept="image/*"/>
+    <input type="button" value="显示文件" onclick="showDetails();"/>
+    <script type="text/javascript">
+        var showDetails = function () {
+            var imageEle = document.getElementById("images");
+            var fileList = imageEle.files;
+            for(var i = 0; i < fileList.length; i++) {
+                var file = fileList[i];
+                div = document.createElement("div");
+                div.innerHTML = "第" + (i + 1) + "个文件的文件名是: " + file.name + ", 该文件类型是: " + file.type + ", 该文件大小为: " + file.size;
+                document.body.appendChild(div);
+            }
+        }
+    </script>
+</body>
+</html>
+
+

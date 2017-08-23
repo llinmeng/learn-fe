@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 表格相关属性 </title>
+    <style type="text/css">
+        table {
+            table-layout: fixed;
+            border-collapse: collapse;
+            border: 3px solid blue;
+        }
+
+        td {
+            background-color: #00FF00;
+            border: 5px solid red;
+        }
+    </style>
+</head>
+<body>
+    表格的宽度将由两个 col 元素计算出来
+    <table>
+        <col style="width: 240px;">
+        <col style="width: 80px;">
+        <tr>
+            <td>JavaScript</td>
+            <td>Java</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>Go</td>
+        </tr>
+    </table>
+    <hr/>
+
+    表格的宽度将由如下第一行单元格的宽度计算出来
+    <table>
+        <tr>
+            <td style="width: 80px;">JavaScript</td>
+            <td style="width: 300px;">Java</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>Go</td>
+        </tr>
+    </table>
+    <hr/>
+
+    每列将会平均分配该表格的宽度
+    <table style="width: 300px;">
+        <tr>
+            <td>JavaScript</td>
+            <td>Java</td>
+        </tr>
+        <tr>
+            <td>Python</td>
+            <td>Go</td>
+        </tr>
+    </table>
+    <hr/>
+</body>
+</html>

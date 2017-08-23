@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function changeAge(person) {
+            person.age = 10;
+            document.write("函数执行中 person 的 age 值为: " + person.age + "<br>");
+            person = null;
+        }
+
+        var person = {age: 15};
+        document.write("函数调用之前 person 的 age 值为: " + person.age + "<br>");
+        changeAge(person);
+        document.write("函数调用之后 person 的 age 值为: " + person.age + "<br>");
+        document.write("person 对象为: " + person);
+    </script>
+</body>
+</html>

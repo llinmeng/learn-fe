@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素选择器 - :first-line</title>
+    <style type="text/css">
+        span {
+            display: block;
+        }
+
+        span:first-line {
+            color: #ff00ff;
+            font-size: 20pt;
+        }
+
+        section:first-line {
+            color: #00FF00;
+            font-size: 30pt;
+        }
+
+        p:first-line {
+            color: #0000ff;
+            font-size: 30pt;
+        }
+    </style>
+</head>
+<body>
+    <span>abc<br/>xyz</span>
+    <section>去年今日出门中, <br/>
+    人面桃花相映红.</section>
+    <p style="width: 160px;">JavaScript 讲义</p>
+</body>
+</html>

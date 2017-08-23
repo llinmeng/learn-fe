@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <!-- - js 实现3个div在一行 - -->
+    <div>divfggwaesdrftgyhuerftgyhuijrtjk</div>
+    <div>div</div>
+    <div>div</div>
+    <div>div</div>
+    <div>div</div>
+    <div>div</div>
+    <div>div</div>
+    <div>div</div>
+    <div>div</div>
+    <div>div</div>
+
+    <script type="text/javascript">
+        <!-- - 固定每行为3个 div - -->
+//        let divCollections = document.getElementsByTagName('div');
+//        for (let divItem of divCollections) {
+//            divItem.style.width = 'calc(100% / 3)';
+//            divItem.style.float = 'left';
+//        }
+        
+        function sortDivByNumber(num) {
+            let divCollections = document.getElementsByTagName('div');
+            for (let divItem of divCollections) {
+                divItem.style.width = 'calc(100% / ${num})';
+                divItem.style.float = 'left';
+            }
+        }
+        sortDivByNumber(10);
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景相关属性</title>
+    <style type="text/css">
+        div {
+            border: 4px dotted blue;
+            height: 70px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    background-color: #aaa;
+    <div style="background-color: #aaaaaa;">测试文字</div>
+
+    background-image: url(8.jpg);
+    <div style="background-image: url(8-1.png);">测试文字</div>
+
+    background-image: url(8.jpg); background-repeat: no-repeat;
+    <div style="background: url(8-1.png) no-repeat;">测试文字</div>
+
+    background-image: url(8.jpg); background-repeat: repeat-x;
+    <div style="background: url(8-1.png) repeat-x;">测试文字</div>
+
+    background-image: url(8-1.png); background-repeat: no-repeat; background-position: 35% 80%;
+    <div style="background: url(8-1.png) no-repeat 35% 80%;">测试文字</div>
+
+    background-image: url(8-1.png); background-repeat: no-repeat; background-position: 30px 8px;
+    <div style="background: url(8-1.png) no-repeat 30px 8px;">测试文字</div>
+
+    background-image: url(8-1.png); background-repeat: no-repeat; background-position: center bottom;
+    <div style="background: url(8-1.png) no-repeat center bottom;">测试文字</div>
+</body>
+</html>

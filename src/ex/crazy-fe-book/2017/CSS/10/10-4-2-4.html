@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 水平排列 </title>
+    <style  type="text/css">
+        div#container {
+            border: 5px solid red;
+            padding: 5px;
+            width: 600px;
+            height: 140px;
+            display: box;
+            display: -moz-box;
+            display: -webkit-box;
+            -webkit-box-orient: horizontal;
+            -moz-box-orient: horizontal;
+            box-orient: horizontal;
+        }
+
+        div>div {
+            border: 5px solid black;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+            border-radius: 12px 12px 0px 0px;
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div style="box-flex: 1; -moz-box-flex: 1; -webkit-box-flex: 1;">栏目一</div>
+        <div>栏目二</div>
+        <div style="box-flex: 3; -moz-box-flex: 3; -webkit-box-flex: 3;">栏目三</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>自定义编号</title>
+    <style type="text/css">
+        div>div {
+            counter-increment: mycounter;
+        }
+
+        div>div:before {
+            content: '第' counter(mycounter,lower-latin) '本';
+            font-size: 20pt;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>Java讲义</div>
+        <div>JavaScript 讲义</div>
+        <div>Android 讲义</div>
+</div>
+</body>

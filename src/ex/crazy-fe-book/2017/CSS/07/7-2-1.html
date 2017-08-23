@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>颜色表示方式</title>
+    <style type="text/css">
+        div>div {
+            width: 400px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div style="position: absolute; top: 0px;">
+        <div style="background-color: red;">background-color: red</div>
+        <div style="background-color: #ff0">background-color: #ff0</div>
+        <div style="background-color: #0000ff;">background-color: #0000ff</div>
+        <div style="background-color: rgb(255, 0, 255);">background-color: rgb(255, 0, 255)</div>
+        <div style="background-color: hsl(120, 80%, 50%);">background-color: hsl(120, 80%, 50%)</div>
+        <!-- - 0.5: 0~1之间的数, 0表示完全透明 - -->
+        <div style="background-color: rgba(255, 0, 255, 0.5);">background-color: rgba(255, 0, 255, 0.5)"</div>
+        <!-- - 0.5: 0~1之间的数, 0表示完全透明 - -->
+        <div style="background-color: hsla(120, 80%, 50%, 0.4);">background-color: hsla(120, 80%, 50%, 0.5)</div>
+    </div>
+    <script type="text/javascript">
+        for (var i = 0; i < 310; i++) {
+            document.write("测试文字");
+        }
+    </script>
+</body>
+</html>

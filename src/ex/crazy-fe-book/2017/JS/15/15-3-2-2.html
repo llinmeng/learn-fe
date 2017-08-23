@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <button id="a">按钮</button>
+    <script type="text/javascript">
+        var clickHandler = function (evt) {
+            if(evt) {
+                alert(evt.target.innerHTML);
+            } else {
+                alert(window.event.srcElement.innerHTML);
+            }
+        }
+
+        document.getElementById("a").onclick = clickHandler;
+    </script>
+</body>
+</html>

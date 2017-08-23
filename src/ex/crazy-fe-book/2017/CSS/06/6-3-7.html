@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>E~F伪类选择器 - CSS3新增的兄弟选择器</title>
+    <style type="text/css">
+        #android ~ .long {
+            background-color: #00FF00;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>Java 讲义</div>
+        <div class="long">Java EE企业应用实战</div>
+        <div id="android">Android讲义</div>
+        <p class="long">Python 讲义</p>
+        <div class="long">JavaScript 权威指南</div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <div id="div">
+        <button id="btn" onclick="demo()">按钮</button>
+    </div>
+
+    <!--<script>
+        function demo() {
+            alert("hello事件处理");
+        }
+    </script>-->
+
+ <!--   <script>
+        var btn = document.getElementById("btn");
+       /* btn.onclick = function () {
+            alert("hello DOM0级事件处理");
+        }*/                                 //事件会被覆盖. 只显示最后一个事件
+
+        btn.onclick = function () {
+            alert("hello DOM0级事件处理");
+        }
+//        btn.onclick = null;         //清除事件处理
+    </script>-->
+
+  <!--  <script>
+        var btn = document.getElementById("btn");
+        btn.addEventListener("click",demo1);
+        btn.addEventListener("click",demo2);                //不覆盖
+        btn.addEventListener("click",demo3);
+        function demo1() {
+            alert("DOM2级事件处理程序1");
+        }
+        function demo2() {
+            alert("DOM2级事件处理程序2");
+        }
+        function demo3() {
+            alert("DOM2级事件处理程序3");
+        }
+        btn.removeEventListener("click", demo2);
+    </script>-->
+
+    <!--兼容各种浏览器-->
+    <script>
+        var btn = document.getElementById("btn");
+        if(btn.addEventListener){                       //DOM2级
+            btn.addEventListener("click", demo);
+        }else if(btn.attachEvent("onclick", demo){      //IE
+            btn.attachEvent("onclick", demo)
+        }else{                                          //DOM0级
+            btn.onclick = demo();
+        }
+
+        function demo() {
+            alert("hello");
+        }
+    </script>
+</body>
+</html>

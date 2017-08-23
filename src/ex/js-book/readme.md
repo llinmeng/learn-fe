@@ -1,0 +1,58 @@
+
+# 前端练习代码:
+
+- js4_25:
+	- 1:javascript基础教程
+		- 01：介绍，实现，输出
+		- 02：语法和注释
+		- 03：变量和数据类型
+	- 2:javascript语法详解
+		- 01：运算符（1）
+		- 02：运算符（2）
+		- 03：条件语句if...else
+		- 04：条件语句switch
+		- 05：循环语句for循环
+		- 06：循环语句while循环
+		 -07：跳转语句
+- js4_26:
+	- 1:javascript函数
+		- 01：了解函数的用途
+		- 02：定义函数
+		- 03：调用函数
+		- 04：带参数的函数
+		- 05：带返回值的函数
+		- 06：局部变量和全局变量
+	- 2:javascript内置对象
+		- 01：什么是对象
+		- 02：String字符串对象
+		- 03：Date日起对象
+		- 04：Array数组对象
+		- 05：Math对象
+- js4_27:
+	- 1:javascript面向对象详解
+		- 01：认识面向对象
+		- 02：JS面向对象（1）
+		- 02：JS面向对象（2）
+	- 2:javascript浏览器对象
+		- 01：window对象
+		- 02：计时器
+		- 03：History对象
+		- 04：Location对象
+		- 05：Screen对象
+	- 3:javascript DOM对象
+		- 01：DOM简介
+		- 02：DOM操作HTML
+		- 03：DOM操作CSS
+		- 04：DOM EventListener
+	- 4:javascriptDOM对象控制HTML元素详解
+		- 01：jsDOM对象控制HTML元素详解-1
+		- 02：jsDOM对象控制HTML元素详解-2
+- js4-28:
+	- 1：javascript事件详解
+		- 01：事件流
+		- 02：事件处理
+		- 03：事件对象
+	- 2:javascript异常事件和事件处理
+		- 01：javascript异常捕获
+		- 02：javascript事件
+			

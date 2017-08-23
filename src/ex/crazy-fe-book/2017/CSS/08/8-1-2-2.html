@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title> 背景相关属性 </title>
+    <style type="text/css">
+        div {
+            border: 30px dotted blue;
+            padding: 20px;
+            height: 80px;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    background: url(8-1.png) no-repeat; background-origin: content; -webkit-background-origin: content;
+    <div style="background: url(8-1.png) no-repeat; background-origin: content-box; -webkit-background-origin: content;">测试文字</div>
+
+    background: url(8-1.png) no-repeat; background-origin: padding-box; -webkit-background-origin: padding-box;
+    <div style="background: url(8-1.png) no-repeat; background-origin: padding-box; -webkit-background-origin: padding-box;">测试文字</div>
+
+    background: url(8-1.png) no-repeat; background-origin: border-box; -webkit-background-origin: border-box;
+    <div style="background: url(8-1.png) no-repeat; background-origin: border-box; -webkit-background-origin: border-box;">测试文字</div>
+</body>
+</html>
