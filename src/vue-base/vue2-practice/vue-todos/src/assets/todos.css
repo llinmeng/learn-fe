@@ -1,0 +1,32 @@
+img,
+h1 {
+  text-align: center;
+  margin: 0 auto;
+}
+ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0 20px;
+  border-top: 2px solid #ccc;
+  background: #fff;
+  box-shadow: 0 10px 30px #ccc;
+  position: relative;
+  transition: .3s;
+}
+ul ul li {
+  font-size: 24px;
+  line-height: 36px;
+  padding: 12px 0;
+  border-bottom: 2px solid #ededed;
+  position: relative;
+}
+ul li label {
+  display: block;
+  vertical-align: middle;
+  padding-left: 50px;
+  letter-spacing: 2px;
+}
+ul .checked > label {
+  color: #d9d9d9;
+  text-decoration: line-through;
+}
